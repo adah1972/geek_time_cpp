@@ -1,0 +1,6 @@
+[submodule "3rd-party/cmcstl2"]
+	path = 3rd-party/cmcstl2
+	url = https://github.com/CaseyCarter/cmcstl2.git
+[submodule "3rd-party/cppcoro"]
+	path = 3rd-party/cppcoro
+	url = https://github.com/lewissbaker/cppcoro.git

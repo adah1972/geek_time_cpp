@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.13)
+project(coroutine_examples)
+
+if(CMAKE_CXX_COMPILER_ID MATCHES Clang)
+  add_subdirectory(coroutines_ts)
+  add_subdirectory(cppcoro)
+elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
+  add_subdirectory(manual_iteration)
+elseif(MSVC)
+  add_subdirectory(manual_iteration)
+  add_subdirectory(coroutines_ts)
+  add_subdirectory(cppcoro)
+  add_subdirectory(msvc)
+endif()
+
+add_subdirectory(boost_coroutine2)
