@@ -11,6 +11,10 @@
 基本构建过程：
 
 ```bash
+git clone https://github.com/adah1972/geek_time_cpp.git
+cd geek_time_cpp
+git submodule init
+git submodule update
 mkdir build
 cd build
 cmake ..
