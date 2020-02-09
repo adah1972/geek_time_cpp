@@ -3,7 +3,7 @@ project(manual_iteration)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
-      -std=gnu++2a -fconcepts")
+      -std=c++17 -fconcepts")
 elseif(MSVC)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
       /std:c++latest /permissive-")

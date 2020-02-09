@@ -8,13 +8,13 @@ if(CMAKE_CXX_COMPILER_ID MATCHES Clang)
         -fms-compatibility -Xclang -fcoroutines-ts")
   elseif(UNIX OR APPLE)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
-        -std=c++2a -stdlib=libc++\
+        -std=c++17 -stdlib=libc++\
         -fcoroutines-ts")
   endif()
 
 elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
-      -std=gnu++2a\
+      -std=c++17\
       -fcoroutines -fconcepts")
 
 elseif(MSVC)
