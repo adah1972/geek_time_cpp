@@ -4,3 +4,6 @@
 [submodule "3rd-party/cppcoro"]
 	path = 3rd-party/cppcoro
 	url = https://github.com/lewissbaker/cppcoro.git
+[submodule "3rd-party/nvwa"]
+	path = 3rd-party/nvwa
+	url = https://github.com/adah1972/nvwa.git

@@ -1,4 +1,9 @@
 cmake_minimum_required(VERSION 3.13)
 project(geek_time_cpp)
 
+if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
+  add_subdirectory(29)
+elseif(MSVC)
+  add_subdirectory(29)
+endif()
 add_subdirectory(30)
