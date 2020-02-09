@@ -1,8 +1,7 @@
 #if __cpp_concepts < 201811
 
 #include <experimental/ranges/range>
-namespace ranges =
-  std::experimental::ranges;
+namespace ranges = std::experimental::ranges;
 
 #else
 
@@ -16,11 +15,11 @@ namespace ranges = std::ranges;
 
 std::vector<int> get_data()
 {
-  return std::vector{1, 2, 3};
+    return std::vector{1, 2, 3};
 }
 
 int main()
 {
-  auto it = ranges::begin(get_data());
-  int i = *it;  // BOOM
+    auto it = ranges::begin(get_data());
+    int i = *it;  // BOOM
 }
