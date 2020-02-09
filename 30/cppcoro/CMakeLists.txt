@@ -26,6 +26,6 @@ else()
 
 endif()
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I${PROJECT_SOURCE_DIR}/../../3rd-party/cppcoro/include")
+include_directories(${PROJECT_SOURCE_DIR}/../../3rd-party/cppcoro/include)
 
 add_executable(fibonacci_cppcoro_generator fibonacci_cppcoro_generator.cpp)

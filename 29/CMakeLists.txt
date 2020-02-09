@@ -11,9 +11,8 @@ else()
   message(FATAL_ERROR "Unrecognized compiler")
 endif()
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
-    -I${PROJECT_SOURCE_DIR}/../3rd-party/cmcstl2/include\
-    -I${PROJECT_SOURCE_DIR}/../3rd-party/nvwa")
+include_directories(${PROJECT_SOURCE_DIR}/../3rd-party/cmcstl2/include)
+include_directories(${PROJECT_SOURCE_DIR}/../3rd-party/nvwa)
 
 add_executable(test01_sort               test01_sort.cpp)
 add_executable(test02_reverse_view       test02_reverse_view.cpp)
