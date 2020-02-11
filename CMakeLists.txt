@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(geek_time_cpp)
 
+add_subdirectory(26)
 add_subdirectory(27)
 if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
   add_subdirectory(28)
