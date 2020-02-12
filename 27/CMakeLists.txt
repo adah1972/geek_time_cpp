@@ -6,7 +6,7 @@ set(Boost_USE_MULTITHREADED ON)
 
 find_package(cpprestsdk CONFIG REQUIRED)
 find_package(Threads)
-find_package(Boost 1.54 REQUIRED "chrono" "system" "thread")
+find_package(Boost REQUIRED chrono system thread)
 
 if(WIN32)
   # CMake on Windows with vcpkg
@@ -20,8 +20,10 @@ else(WIN32)
   set(USED_LIBS
     cpprest
     cpprestsdk::cpprestsdk_openssl_internal
-    ${Boost_CHRONO_LIBRARY} ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY}
-    ${CMAKE_THREAD_LIBS_INIT})
+    Boost::chrono
+    Boost::system
+    Boost::thread
+    Threads::Threads)
 endif(WIN32)
 
 add_executable(client      client.cpp)
