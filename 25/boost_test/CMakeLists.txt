@@ -9,7 +9,7 @@ find_package(Boost REQUIRED unit_test_framework)
 include_directories(${PROJECT_SOURCE_DIR}/../../3rd-party/nvwa)
 
 # The following line is necessary at least on CentOS 7 with Boost 1.67
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBOOST_TEST_DYN_LINK")
+add_compile_options(-DBOOST_TEST_DYN_LINK)
 
 set(USED_LIBS Boost::unit_test_framework)
 

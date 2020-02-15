@@ -2,11 +2,9 @@ cmake_minimum_required(VERSION 3.13)
 project(range_examples)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
-      -std=c++17 -fconcepts")
+  add_compile_options(-std=c++17 -fconcepts)
 elseif(MSVC)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
-      /std:c++latest /permissive-")
+  add_compile_options(/std:c++latest /permissive-)
 else()
   message(FATAL_ERROR "Unrecognized compiler")
 endif()
@@ -16,7 +14,7 @@ if(Armadillo_FOUND)
   set(HAVE_ARMA 1)
 endif()
 if(HAVE_ARMA)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DHAVE_ARMA")
+  add_compile_options(-DHAVE_ARMA)
 endif()
 
 include_directories(${PROJECT_SOURCE_DIR}/../3rd-party/cmcstl2/include)

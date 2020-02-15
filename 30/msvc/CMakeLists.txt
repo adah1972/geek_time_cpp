@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 3.13)
 project(msvc_specific_examples)
 
 if(MSVC)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}\
-      /std:c++latest /await")
+  add_compile_options(/std:c++latest /await)
 else()
   message(FATAL_ERROR "Unsupported compiler")
 endif()
