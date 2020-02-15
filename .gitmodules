@@ -7,3 +7,6 @@
 [submodule "3rd-party/nvwa"]
 	path = 3rd-party/nvwa
 	url = https://github.com/adah1972/nvwa.git
+[submodule "3rd-party/expected"]
+	path = 3rd-party/expected
+	url = https://github.com/TartanLlama/expected.git
