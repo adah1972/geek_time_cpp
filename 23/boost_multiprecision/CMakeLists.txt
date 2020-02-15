@@ -15,4 +15,3 @@ if(GMP_FOUND)
   add_executable(bm_test02_gmp_int bm_test02_gmp_int.cpp)
   target_link_libraries(bm_test02_gmp_int PRIVATE ${GMP_LIBRARY})
 endif(GMP_FOUND)
-
