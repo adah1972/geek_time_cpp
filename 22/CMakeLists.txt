@@ -10,11 +10,11 @@ endif()
 include_directories(${PROJECT_SOURCE_DIR}/../3rd-party/expected/include)
 include_directories(${PROJECT_SOURCE_DIR}/../3rd-party/nvwa)
 
-add_executable(test01_optional     test01_optional.cpp)
+add_executable(test_optional     test_optional.cpp)
 if(NOT CMAKE_CXX_COMPILER_ID MATCHES GNU OR
    CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 8)
 # GCC 7 (or lower) does not support non-trivial designated initializers
-add_executable(test02_tagged_union test02_tagged_union.cpp)
+add_executable(test_tagged_union test_tagged_union.cpp)
 endif()
-add_executable(test03_variant      test03_variant.cpp)
-add_executable(test04_expected     test04_expected.cpp)
+add_executable(test_variant      test_variant.cpp)
+add_executable(test_expected     test_expected.cpp)
