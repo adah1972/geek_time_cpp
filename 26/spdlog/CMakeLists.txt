@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(spdlog CONFIG REQUIRED)
 
-include_directories(${PROJECT_SOURCE_DIR}/../../common)
+include_directories(../../common)
 
 set(USED_LIBS spdlog::spdlog)
 

@@ -7,8 +7,8 @@ else()
   set(CMAKE_CXX_STANDARD 17)
 endif()
 
-include_directories(${PROJECT_SOURCE_DIR}/../3rd-party/expected/include)
-include_directories(${PROJECT_SOURCE_DIR}/../3rd-party/nvwa)
+include_directories(../3rd-party/expected/include)
+include_directories(../3rd-party/nvwa)
 
 add_executable(test_optional     test_optional.cpp)
 if(NOT CMAKE_CXX_COMPILER_ID MATCHES GNU OR

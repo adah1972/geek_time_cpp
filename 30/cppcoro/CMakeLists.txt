@@ -22,11 +22,11 @@ else()
 
 endif()
 
-include_directories(${PROJECT_SOURCE_DIR}/../../3rd-party/cppcoro/include)
+include_directories(../../3rd-party/cppcoro/include)
 
 add_executable(fibonacci_cppcoro_generator fibonacci_cppcoro_generator.cpp)
 
 if(HAVE_CONCEPTS)
-  include_directories(${PROJECT_SOURCE_DIR}/../../3rd-party/cmcstl2/include)
+  include_directories(../../3rd-party/cmcstl2/include)
   add_executable(fibonacci_generator_view fibonacci_generator_view.cpp)
 endif()
