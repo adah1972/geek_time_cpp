@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <fstream>
 #include <iostream>
+#include <iterator>
 #include <numeric>
 #include <vector>
 #include <nvwa/istream_line_reader.h>
