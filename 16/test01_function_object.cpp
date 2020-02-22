@@ -1,16 +1,15 @@
 #include <algorithm>
 #include <functional>
 #include <iostream>
+#include <map>
+#include <string>
 #include <vector>
 #include <nvwa/c++_features.h>
 
 using namespace std;
 
 struct adder {
-    adder(int n)
-        : n_(n)
-    {
-    }
+    adder(int n) : n_(n) {}
     int operator()(int x) const
     {
         return x + n_;
@@ -49,6 +48,16 @@ int main()
     {
         auto adder = [](int n) { return [n](int x) { return x + n; }; };
         cout << "Currying: " << adder(2)(5) << endl;
+    }
+
+    {
+        map<string, function<int(int, int)>> op_dict{
+            {"+", [](int x, int y) { return x + y; }},
+            {"-", [](int x, int y) { return x - y; }},
+            {"*", [](int x, int y) { return x * y; }},
+            {"/", [](int x, int y) { return x / y; }},
+        };
+        cout << "std::function: " << op_dict.at("+")(1, 6) << endl;
     }
 #endif
 }
