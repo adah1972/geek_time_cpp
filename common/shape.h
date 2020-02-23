@@ -2,6 +2,7 @@
 #define SHAPE_H
 
 #include <stdexcept>
+#include <stdio.h>
 
 enum class shape_type {
     circle,
@@ -15,12 +16,21 @@ public:
 };
 
 class circle : public shape {
+public:
+    circle() { puts("circle()"); }
+    ~circle() { puts("~circle()"); }
 };
 
 class triangle : public shape {
+public:
+    triangle() { puts("triangle()"); }
+    ~triangle() { puts("~triangle()"); }
 };
 
 class rectangle : public shape {
+public:
+    rectangle() { puts("rectangle()"); }
+    ~rectangle() { puts("~rectangle()"); }
 };
 
 inline shape* create_shape(shape_type type)
