@@ -1,21 +1,5 @@
 #include <stdio.h>
-
-class shape {
-public:
-    virtual ~shape() {}
-};
-
-class circle : public shape {
-public:
-    circle() { puts("circle()"); }
-    ~circle() { puts("~circle()"); }
-};
-
-class triangle : public shape {
-public:
-    triangle() { puts("triangle()"); }
-    ~triangle() { puts("~triangle()"); }
-};
+#include "shape.h"
 
 class result {
 public:
