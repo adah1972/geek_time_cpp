@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(geek_time_cpp)
 
+add_subdirectory(03)
 add_subdirectory(04)
 add_subdirectory(05)
 add_subdirectory(09)
