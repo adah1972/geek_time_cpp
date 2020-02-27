@@ -13,8 +13,8 @@ add_compile_options(-DBOOST_TEST_DYN_LINK)
 
 set(USED_LIBS Boost::unit_test_framework)
 
-add_executable(bt_test01_simple bt_test01_simple.cpp)
-add_executable(bt_test02_split  bt_test02_split.cpp bt_test_main.cpp)
+add_executable(bt_test01_simple test01_simple.cpp)
+add_executable(bt_test02_split  test02_split.cpp test_main.cpp)
 
 target_link_libraries(bt_test01_simple PRIVATE ${USED_LIBS})
 target_link_libraries(bt_test02_split  PRIVATE ${USED_LIBS})
