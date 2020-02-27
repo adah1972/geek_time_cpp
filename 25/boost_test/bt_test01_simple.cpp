@@ -1,6 +1,6 @@
 #define BOOST_TEST_MAIN
-#include <boost/test/unit_test.hpp>
-#include <stdexcept>
+#include <stdexcept>                 // std::runtime_error
+#include <boost/test/unit_test.hpp>  // BOOST_TEST/...
 
 void test(int n)
 {

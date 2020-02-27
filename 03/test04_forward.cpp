@@ -1,5 +1,5 @@
-#include <utility>
-#include <stdio.h>
+#include <utility>  // std::forward
+#include <stdio.h>  // puts
 
 class shape {
 public:

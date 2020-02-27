@@ -1,15 +1,15 @@
-#include <nvwa/c++_features.h>
+#include <nvwa/c++_features.h>  // NVWA_USES_CRIPPLED_CLANG
 #if NVWA_USES_CRIPPLED_CLANG
 #include <__config>
 #undef  _LIBCPP_AVAILABILITY_BAD_OPTIONAL_ACCESS
 #define _LIBCPP_AVAILABILITY_BAD_OPTIONAL_ACCESS
 #endif
 
-#include <iostream>
-#include <functional>
-#include <optional>
-#include <type_traits>
-#include <utility>
+#include <functional>   // std::plus
+#include <iostream>     // std::cout/endl
+#include <optional>     // std::optional/make_optional
+#include <type_traits>  // std::decay_t
+#include <utility>      // std::forward
 
 using namespace std;
 

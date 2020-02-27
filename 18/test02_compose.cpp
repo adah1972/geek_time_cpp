@@ -1,7 +1,8 @@
-#include <iostream>
-#include <numeric>
-#include <vector>
-#include <nvwa/functional.h>
+#include <iostream>           // std::cout/endl
+#include <numeric>            // std::accumulate
+#include <utility>            // std::forward
+#include <vector>             // std::vector
+#include <nvwa/functional.h>  // nvwa::fmap
 
 using namespace std;
 using nvwa::fmap;

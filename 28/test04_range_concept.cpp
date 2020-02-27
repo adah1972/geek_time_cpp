@@ -1,8 +1,8 @@
-#include <iostream>
-#include <string>
-#include <type_traits>
-#include <vector>
-#include "output_container.h"
+#include <iostream>                      // std::cout/endl
+#include <string>                        // std::string
+#include <type_traits>                   // std::decay_t
+#include <vector>                        // std::vector
+#include "output_container.h"            // operator<< for containers
 
 using namespace std;
 
@@ -10,12 +10,12 @@ using namespace std;
 
 #if __cpp_concepts < 201811
 
-#include <experimental/ranges/concepts>
+#include <experimental/ranges/concepts>  // concepts defined in ranges
 using namespace experimental::ranges;
 
 #else
 
-#include <concepts>
+#include <ranges>                        // std::ranges::range
 using namespace ranges;
 
 #endif

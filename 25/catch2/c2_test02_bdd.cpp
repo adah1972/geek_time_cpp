@@ -1,5 +1,5 @@
-#include "catch.hpp"
-#include <vector>
+#include "catch.hpp"  // SCENARIO/GIVEN/WHEN/THEN/CHECK
+#include <vector>     // std::vector
 
 typedef std::vector<int> IntContainer;
 

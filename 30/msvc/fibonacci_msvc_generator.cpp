@@ -1,6 +1,6 @@
-#include <iostream>
-#include <stdint.h>
-#include <experimental/generator>
+#include <iostream>                // std::cout/endl
+#include <stdint.h>                // uint64_t
+#include <experimental/generator>  // generator
 
 using std::experimental::generator;
 

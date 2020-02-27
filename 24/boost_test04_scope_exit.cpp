@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <boost/scope_exit.hpp>
+#include <stdio.h>               // fopen/perror/puts
+#include <boost/scope_exit.hpp>  // BOOST_SCOPE_EXIT
 
 void test()
 {

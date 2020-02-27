@@ -1,8 +1,8 @@
 #ifndef SINGLETON_H
 #define SINGLETON_H
 
-#include <atomic>
-#include <mutex>
+#include <atomic>  // std::atomic
+#include <mutex>   // std::mutex
 
 class singleton {
 public:

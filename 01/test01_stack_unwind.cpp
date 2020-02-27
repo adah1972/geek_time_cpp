@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.h>  // puts
 
 class Obj {
 public:

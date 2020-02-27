@@ -1,7 +1,7 @@
-#include <functional>
-#include <iostream>
-#include <type_traits>
-#include <utility>
+#include <functional>   // std::ref
+#include <iostream>     // std::cout/endl
+#include <type_traits>  // std::decay_t
+#include <utility>      // std::forward
 
 using namespace std;
 

@@ -1,6 +1,6 @@
-#include <stdint.h>
-#include <iostream>
-#include <experimental/coroutine>
+#include <experimental/coroutine>  // coroutine_handle/suspend_always
+#include <iostream>                // std::cout/endl
+#include <stdint.h>                // uint64_t
 
 using std::experimental::coroutine_handle;
 using std::experimental::suspend_always;

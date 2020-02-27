@@ -1,9 +1,11 @@
-﻿#include <iostream>
+﻿#include <exception>              // std::exception
+#include <iostream>               // std::cout/cerr/endl/wcout
 #ifdef _WIN32
-#include <fcntl.h>
-#include <io.h>
+#include <fcntl.h>                // _O_WTEXT
+#include <io.h>                   // _setmode
+#include <stdio.h>                // _fileno/stdout
 #endif
-#include <cpprest/http_client.h>
+#include <cpprest/http_client.h>  // web::http/...
 
 using namespace utility;
 using namespace web::http;

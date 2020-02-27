@@ -1,4 +1,4 @@
-#include <boost/hana.hpp>
+#include <boost/hana.hpp>  // boost::hana
 namespace hana = boost::hana;
 
 class shape {};

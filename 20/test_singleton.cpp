@@ -1,7 +1,7 @@
-#include <iostream>
-#include <thread>
-#include <vector>
-#include "singleton.h"
+#include <iostream>     // std::cout
+#include <thread>       // std::thread
+#include <vector>       // std::vector
+#include "singleton.h"  // singleton
 
 using namespace std;
 

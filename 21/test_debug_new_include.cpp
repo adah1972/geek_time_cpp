@@ -1,5 +1,4 @@
-#include <iostream>
-#include <nvwa/debug_new.h>
+#include <nvwa/debug_new.h>  // new
 
 int main()
 {

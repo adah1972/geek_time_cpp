@@ -1,8 +1,9 @@
 #ifndef FIBONACCI_HPP
 #define FIBONACCI_HPP
 
-#include <stddef.h>
-#include <stdint.h>
+#include <iterator>  // std::input_iterator_tag
+#include <stddef.h>  // ptrdiff_t
+#include <stdint.h>  // uint64_t
 
 class fibonacci {
 public:

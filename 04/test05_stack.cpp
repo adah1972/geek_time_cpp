@@ -1,5 +1,5 @@
-#include <iostream>
-#include <stack>
+#include <iostream>  // std::cout/endl
+#include <stack>     // std::stack
 
 int main()
 {

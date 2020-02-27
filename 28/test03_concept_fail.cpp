@@ -1,5 +1,5 @@
-#include <string>
-#include <vector>
+#include <string>                        // std::string
+#include <vector>                        // std::vector
 
 using namespace std;
 
@@ -7,12 +7,13 @@ using namespace std;
 
 #if __cpp_concepts < 201811
 
-#include <experimental/ranges/concepts>
+#include <experimental/ranges/concepts>  // concepts defined in ranges
 using namespace experimental::ranges;
 
 #else
 
-#include <concepts>
+#include <concepts>                      // std::equality_comparable_with
+#include <ranges>                        // std::ranges::range
 using namespace ranges;
 
 #endif

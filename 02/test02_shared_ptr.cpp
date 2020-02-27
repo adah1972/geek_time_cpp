@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include "shape.h"
-#include "smart_ptr.h"
+#include <stdio.h>      // printf/puts
+#include "shape.h"      // shape/shape_type/create_shape
+#include "smart_ptr.h"  // smart_ptr
 
 int main()
 {

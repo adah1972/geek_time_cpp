@@ -1,13 +1,14 @@
-#include <exception>
-#include <iostream>
-#include <map>
-#include <string>
+#include <exception>                // std::exception
+#include <iostream>                 // std::cout/cerr/endl/wcout
+#include <map>                      // std::map
+#include <string>                   // std::string
 #ifdef _WIN32
-#include <fcntl.h>
-#include <io.h>
+#include <fcntl.h>                  // _O_WTEXT
+#include <io.h>                     // _setmode
+#include <stdio.h>                  // _fileno/stdout
 #endif
-#include <cpprest/http_listener.h>
-#include <cpprest/json.h>
+#include <cpprest/http_listener.h>  // web::http::experimental::listener/...
+#include <cpprest/json.h>           // web::json
 
 using namespace std;
 using namespace utility;

@@ -1,8 +1,8 @@
 #ifndef SHAPE_H
 #define SHAPE_H
 
-#include <stdexcept>
-#include <stdio.h>
+#include <stdexcept>  // std::logic_error
+#include <stdio.h>    // puts
 
 enum class shape_type {
     circle,

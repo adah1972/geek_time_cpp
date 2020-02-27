@@ -1,10 +1,10 @@
-#include <algorithm>
-#include <fstream>
-#include <iostream>
-#include <iterator>
-#include <numeric>
-#include <vector>
-#include <nvwa/istream_line_reader.h>
+#include <algorithm>                   // std::transform
+#include <fstream>                     // std::ifstream
+#include <iostream>                    // std::cout/endl
+#include <iterator>                    // std::distance
+#include <numeric>                     // std::accumulate
+#include <vector>                      // std::vector
+#include <nvwa/istream_line_reader.h>  // nvwa::istream_line_reader
 
 using namespace std;
 using nvwa::istream_line_reader;

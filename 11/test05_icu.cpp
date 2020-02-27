@@ -1,7 +1,7 @@
-﻿#include <iostream>
-#include <string>
-#include <unicode/unistr.h>
-#include <unicode/ustream.h>
+﻿#include <iostream>           // std::cout/endl
+#include <string>             // std::string
+#include <unicode/unistr.h>   // icu::UnicodeString
+#include <unicode/ustream.h>  // operator<< for icu::UnicodeString
 
 using namespace std;
 using icu::UnicodeString;

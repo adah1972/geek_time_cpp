@@ -1,7 +1,7 @@
-#include <array>     // std::array
-#include <iostream>  // std::cout/endl
-#include <map>       // std::map
-#include "output_container.h"
+#include <array>               // std::array
+#include <iostream>            // std::cout/endl
+#include <map>                 // std::map
+#include "output_container.h"  // operator<< for containers
 
 typedef std::array<char, 8> mykey_t;
 

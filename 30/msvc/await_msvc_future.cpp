@@ -1,8 +1,7 @@
-#include <chrono>
-#include <future>
-#include <iostream>
-#include <thread>
-#include <experimental/coroutine>
+#include <chrono>    // std::chrono::seconds
+#include <future>    // std::async
+#include <iostream>  // std::cout/endl
+#include <thread>    // std::this_thread
 
 using namespace std;
 

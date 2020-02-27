@@ -1,5 +1,5 @@
-#include <bitset>
-#include <iostream>
+#include <bitset>    // std::bitset
+#include <iostream>  // std::cout/endl
 
 using namespace std;
 

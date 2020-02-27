@@ -1,7 +1,7 @@
-#include <iostream>
-#include <map>
-#include <vector>
-#include "output_container.h"
+#include <iostream>            // std::cout/endl
+#include <map>                 // std::map
+#include <vector>              // std::vector
+#include "output_container.h"  // operator<< for containers
 
 using namespace std;
 

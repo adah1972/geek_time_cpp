@@ -1,6 +1,6 @@
-#include <iostream>
-#include <stdint.h>
-#include <boost/coroutine2/all.hpp>
+#include <iostream>                  // std::cout/endl
+#include <stdint.h>                  // uint64_t
+#include <boost/coroutine2/all.hpp>  // boost::coroutines2
 
 typedef boost::coroutines2::coroutine<const uint64_t> coro_t;
 

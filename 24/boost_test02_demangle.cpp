@@ -1,8 +1,7 @@
-#include <iostream>
-#include <typeinfo>
-#include <utility>
-#include <vector>
-#include <boost/core/demangle.hpp>
+#include <iostream>                 // std::cout/endl
+#include <typeinfo>                 // std::type_info
+#include <vector>                   // std::vector
+#include <boost/core/demangle.hpp>  // boost::core::demangle
 
 using namespace std;
 using boost::core::demangle;

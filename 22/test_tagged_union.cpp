@@ -1,5 +1,5 @@
-#include <iostream>
-#include <string>
+#include <iostream>  // std::cout/endl
+#include <string>    // std::string
 
 using namespace std;
 

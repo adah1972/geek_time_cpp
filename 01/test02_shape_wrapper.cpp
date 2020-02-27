@@ -1,4 +1,4 @@
-#include "shape.h"
+#include "shape.h"  // shape/shape_type/create_shape
 
 class shape_wrapper {
 public:

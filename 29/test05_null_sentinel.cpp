@@ -1,6 +1,6 @@
-#include <experimental/ranges/algorithm>
-#include <experimental/ranges/iterator>
-#include <iostream>
+#include <experimental/ranges/algorithm>  // ranges::for_each
+#include <experimental/ranges/iterator>   // ranges::input_iterator
+#include <iostream>                       // std::cout/endl
 
 using namespace std::experimental::ranges;
 

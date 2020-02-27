@@ -1,6 +1,6 @@
-#include <iostream>
-#include <stdint.h>
-#include <cppcoro/generator.hpp>
+#include <iostream>               // std::cout/endl
+#include <stdint.h>               // uint64_t
+#include <cppcoro/generator.hpp>  // cppcoro::generator
 
 using cppcoro::generator;
 

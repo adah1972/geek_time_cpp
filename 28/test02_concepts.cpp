@@ -1,10 +1,8 @@
 #ifdef HAVE_ARMA
-#include <armadillo>
+#include <armadillo>                     // arma::imat/imat22
 #endif
-#include <iostream>
-#include <memory>
-#include <string>
-#include <type_traits>
+#include <iostream>                      // std::cout/endl/boolalpha
+#include <memory>                        // std::shared_ptr/unique_ptr
 
 using namespace std;
 
@@ -12,12 +10,12 @@ using namespace std;
 
 #if __cpp_concepts < 201811
 
-#include <experimental/ranges/concepts>
+#include <experimental/ranges/concepts>  // concepts defined in ranges
 using namespace experimental::ranges;
 
 #else
 
-#include <concepts>
+#include <concepts>                      // standard concepts
 
 #endif
 

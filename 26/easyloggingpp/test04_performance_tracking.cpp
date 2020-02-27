@@ -1,6 +1,6 @@
-﻿#include <chrono>
-#include <thread>
-#include "easylogging++.h"
+﻿#include <chrono>           // std::chrono::microseconds
+#include <thread>           // std::this_thread
+#include "easylogging++.h"  // easylogging++
 INITIALIZE_EASYLOGGINGPP
 
 void foo()

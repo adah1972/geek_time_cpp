@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+﻿#include <stdio.h>  // printf/putchar
 
 template <typename T>
 void dump(const T& str)

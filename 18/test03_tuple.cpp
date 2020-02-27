@@ -1,8 +1,8 @@
-#include <algorithm>
-#include <iostream>
-#include <string>
-#include <tuple>
-#include <vector>
+#include <algorithm>  // std::sort
+#include <iostream>   // std::cout/endl
+#include <string>     // std::string
+#include <tuple>      // std::tuple/get
+#include <vector>     // std::vector
 
 using namespace std;
 

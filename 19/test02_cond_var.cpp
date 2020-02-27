@@ -1,10 +1,10 @@
-#include <chrono>
-#include <condition_variable>
-#include <functional>
-#include <iostream>
-#include <mutex>
-#include <thread>
-#include <utility>
+#include <chrono>              // std::chrono::seconds
+#include <condition_variable>  // std::condition_variable
+#include <functional>          // std::ref
+#include <iostream>            // std::cout
+#include <mutex>               // std::mutex/unique_lock
+#include <thread>              // std::thread/this_thread
+#include <utility>             // std::forward/move
 
 using namespace std;
 

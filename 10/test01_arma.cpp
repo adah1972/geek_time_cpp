@@ -1,5 +1,5 @@
-#include <armadillo>
-#include <iostream>
+#include <armadillo>  // arma::imat22
+#include <iostream>   // std::cout
 
 using arma::imat22;
 using std::cout;

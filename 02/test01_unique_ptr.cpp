@@ -1,6 +1,5 @@
-#include <utility>
-#include <stdio.h>
-#include "shape.h"
+#include <utility>  // std::swap/move
+#include "shape.h"  // shape/shape_type/create_shape
 
 template <typename T>
 class smart_ptr {

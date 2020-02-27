@@ -1,7 +1,7 @@
-#include <experimental/ranges/algorithm>
-#include <experimental/ranges/iterator>
-#include <experimental/ranges/ranges>
-#include <iostream>
+#include <experimental/ranges/algorithm>  // ranges::copy/sort
+#include <experimental/ranges/iterator>   // ranges::ostream_iterator
+#include <experimental/ranges/ranges>     // ranges::views
+#include <iostream>                       // std::cout/endl
 
 int main()
 {

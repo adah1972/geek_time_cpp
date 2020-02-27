@@ -1,7 +1,7 @@
-#include <iostream>
-#include <string>
-#include <vector>
-#include <range/v3/all.hpp>
+#include <iostream>          // std::cout/endl
+#include <string>            // std::string
+#include <vector>            // std::vector
+#include <range/v3/all.hpp>  // ranges
 
 int main()
 {

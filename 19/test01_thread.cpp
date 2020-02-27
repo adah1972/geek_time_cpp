@@ -1,7 +1,7 @@
-#include <chrono>
-#include <iostream>
-#include <mutex>
-#include <thread>
+#include <chrono>    // std::chrono::milliseconds
+#include <iostream>  // std::cout
+#include <mutex>     // std::mutex/lock_guard
+#include <thread>    // std::thread/this_thread
 
 using namespace std;
 

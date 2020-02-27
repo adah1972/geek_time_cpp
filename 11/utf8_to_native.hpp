@@ -1,7 +1,7 @@
 #ifndef UTF8_TO_NATIVE_HPP
 #define UTF8_TO_NATIVE_HPP
 
-#include <string>
+#include <string>  // std::string
 
 #if defined(_WIN32) || defined(_UNICODE)
 

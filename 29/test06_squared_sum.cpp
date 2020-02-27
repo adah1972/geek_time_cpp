@@ -1,6 +1,7 @@
-#include <experimental/ranges/range>
-#include <iostream>
-#include <nvwa/functional.h>
+#include <experimental/ranges/ranges>  // ranges::views
+#include <functional>                  // std::plus
+#include <iostream>                    // std::cout/endl
+#include <nvwa/functional.h>           // nvwa::reduce
 
 using namespace std::experimental::ranges;
 

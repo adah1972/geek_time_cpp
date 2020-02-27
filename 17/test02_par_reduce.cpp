@@ -1,8 +1,8 @@
-#include <chrono>
-#include <execution>
-#include <iostream>
-#include <numeric>
-#include <vector>
+#include <chrono>     // std::chrono::duration/high_resolution_clock
+#include <execution>  // std::execution::par
+#include <iostream>   // std::cout
+#include <numeric>    // std::accumulate/reduce
+#include <vector>     // std::vector
 
 using namespace std;
 

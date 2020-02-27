@@ -1,8 +1,8 @@
-#include <chrono>
-#include <complex>
-#include <iostream>
-#include <string>
-#include <thread>
+#include <chrono>    // std::chrono::milliseconds
+#include <complex>   // std::complex
+#include <iostream>  // std::cout/endl
+#include <string>    // std::string
+#include <thread>    // std::this_thread
 
 using namespace std;
 

@@ -1,10 +1,11 @@
 ﻿#ifdef _WIN32
-#include <fcntl.h>
-#include <io.h>
+#include <fcntl.h>   // _O_WTEXT
+#include <io.h>      // _setmode
+#include <stdio.h>   // _fileno/stdout
 #else
-#include <locale>
+#include <locale>    // std::locale
 #endif
-#include <iostream>
+#include <iostream>  // std::wcout
 
 int main()
 {

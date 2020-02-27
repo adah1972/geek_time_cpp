@@ -1,7 +1,7 @@
-#include <iomanip>
-#include <iostream>
-#include <stdexcept>
-#include <string>
+#include <iomanip>    // std::setw
+#include <iostream>   // std::cout/endl/hex
+#include <stdexcept>  // std::runtime_error
+#include <string>     // std::string/u16string
 
 using namespace std;
 

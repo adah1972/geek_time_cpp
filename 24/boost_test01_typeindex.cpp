@@ -1,8 +1,8 @@
-#include <iostream>
-#include <typeinfo>
-#include <utility>
-#include <vector>
-#include <boost/type_index.hpp>
+#include <iostream>              // std::cout/endl
+#include <typeinfo>              // std::type_info
+#include <utility>               // std::move
+#include <vector>                // std::vector
+#include <boost/type_index.hpp>  // boost::typeindex
 
 using namespace std;
 using boost::typeindex::type_id;

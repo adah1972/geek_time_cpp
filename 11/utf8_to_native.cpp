@@ -1,8 +1,9 @@
 #include "utf8_to_native.hpp"
 
 #if defined(_WIN32) || defined(_UNICODE)
-#include <windows.h>
-#include <system_error>
+#include <windows.h>     // GetLastError/MultiByteToWideChar
+#include <string>        // std::string
+#include <system_error>  // std::error_code/system_category/system_error
 
 namespace {
 

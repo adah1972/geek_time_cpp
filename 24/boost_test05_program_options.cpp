@@ -1,7 +1,7 @@
-#include <iostream>
-#include <string>
-#include <stdlib.h>
-#include <boost/program_options.hpp>
+#include <iostream>                   // std::cout/endl
+#include <string>                     // std::string
+#include <stdlib.h>                   // exit
+#include <boost/program_options.hpp>  // boost::program_options
 
 namespace po = boost::program_options;
 using std::cout;

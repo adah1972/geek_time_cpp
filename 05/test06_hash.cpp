@@ -1,9 +1,9 @@
-#include <algorithm>   // std::sort
-#include <functional>  // std::less/greater/hash
-#include <iostream>    // std::cout/endl
-#include <string>      // std::string
-#include <vector>      // std::vector
-#include "output_container.h"
+#include <algorithm>           // std::sort
+#include <functional>          // std::less/greater/hash
+#include <iostream>            // std::cout/endl
+#include <string>              // std::string
+#include <vector>              // std::vector
+#include "output_container.h"  // operator<< for containers
 
 using namespace std;
 

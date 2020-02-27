@@ -1,5 +1,5 @@
-#include <iostream>
-#include <stdlib.h>
+#include <iostream>  // std::cout
+#include <stdlib.h>  // rand
 
 using namespace std;
 

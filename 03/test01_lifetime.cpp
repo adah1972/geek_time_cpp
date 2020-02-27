@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include "shape.h"
+#include <stdio.h>  // puts
+#include "shape.h"  // shape/circle/triangle
 
 class result {
 public:

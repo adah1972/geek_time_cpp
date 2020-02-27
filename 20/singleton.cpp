@@ -1,5 +1,5 @@
 #include "singleton.h"
-#include <iostream>
+#include <iostream>  // std::cout
 
 std::mutex singleton::lock_;
 std::atomic<singleton*> singleton::inst_ptr_;

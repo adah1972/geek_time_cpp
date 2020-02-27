@@ -1,5 +1,5 @@
-#include <array>
-#include <iostream>
+#include <iostream>  // std::cout
+#include <utility>   // std::make_index_sequence
 
 using namespace std;
 

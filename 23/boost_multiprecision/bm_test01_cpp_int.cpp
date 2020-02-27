@@ -1,6 +1,5 @@
-#include <iomanip>
-#include <iostream>
-#include <boost/multiprecision/cpp_int.hpp>
+#include <iostream>                          // std::cout/endl/dec/hex
+#include <boost/multiprecision/cpp_int.hpp>  // boost::multiprecision::cpp_int
 
 using namespace std;
 

@@ -1,6 +1,6 @@
-﻿#include <fstream>
-#include <iostream>
-#include "utf8_to_native.hpp"
+﻿#include <fstream>             // std::ifstream
+#include <iostream>            // std::cout/endl
+#include "utf8_to_native.hpp"  // NATIVE_STR
 
 int main()
 {

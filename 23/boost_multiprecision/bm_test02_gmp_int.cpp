@@ -1,6 +1,5 @@
-#include <iomanip>
-#include <iostream>
-#include <boost/multiprecision/gmp.hpp>
+#include <iostream>                      // std::cout/endl/dec/hex
+#include <boost/multiprecision/gmp.hpp>  // boost::multiprecision::gmp_int
 
 using namespace std;
 

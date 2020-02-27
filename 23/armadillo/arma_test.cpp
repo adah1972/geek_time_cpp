@@ -1,7 +1,7 @@
-#include <armadillo>
-#include <cmath>
-#include <iomanip>
-#include <iostream>
+#include <armadillo>  // arma::datum/mat/vec
+#include <cmath>      // std::cos/sin
+#include <iomanip>    // std::setprecision/setw
+#include <iostream>   // std::cout/fixed
 
 using namespace std;
 

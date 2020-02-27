@@ -1,7 +1,7 @@
-#include <experimental/ranges/ranges>
-#include <iostream>
-#include <stdint.h>
-#include <cppcoro/generator.hpp>
+#include <experimental/ranges/ranges>  // ranges::views
+#include <iostream>                    // std::cout/endl
+#include <stdint.h>                    // uint64_t
+#include <cppcoro/generator.hpp>       // cppcoro::generator
 
 using cppcoro::generator;
 
@@ -21,8 +21,8 @@ int main()
 {
     namespace ranges = std::experimental::ranges;
     auto&& fib = fibonacci();
-    // A view does not work with an rvalue, so we need to convert
-    // fibonacci() into a reference.
+    // A view does not work with an rvalue, so we need to assign
+    // fibonacci() to a reference.
     for (auto i : fib | ranges::views::take(20)) {
         std::cout << i << std::endl;
     }

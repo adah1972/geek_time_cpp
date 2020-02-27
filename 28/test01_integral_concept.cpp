@@ -1,17 +1,15 @@
-#include <iostream>
-#include <type_traits>
+#include <iostream>                      // std::cout/endl
 
 #if __cpp_concepts < 201811
 
-#include <experimental/ranges/concepts>
-#include <experimental/ranges/range>
+#include <experimental/ranges/concepts>  // ranges::integral
 using std::experimental::ranges::integral;
 
 #define CONCEPT concept bool
 
 #else
 
-#include <concepts>
+#include <concepts>                      // std::integral
 
 #define CONCEPT concept
 

@@ -1,8 +1,9 @@
-#include "output_container.h"
-#include <iostream>
-#include <algorithm>
-#include <list>
-#include <vector>
+#include <algorithm>           // std::sort
+#include <iostream>            // std::cout/endl
+#include <list>                // std::list
+#include <vector>              // std::vector
+#include "output_container.h"  // operator<< for containers
+
 using namespace std;
 
 int main()

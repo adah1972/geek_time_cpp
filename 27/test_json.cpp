@@ -1,12 +1,13 @@
-﻿#include <iostream>
-#include <string>
-#include <utility>
-#include <assert.h>
+﻿#include <iostream>        // std::cout/cerr/endl/wcout
+#include <string>          // std::string
+#include <utility>         // std::move
+#include <assert.h>        // assert
 #ifdef _WIN32
-#include <fcntl.h>
-#include <io.h>
+#include <fcntl.h>         // _O_WTEXT
+#include <io.h>            // _setmode
+#include <stdio.h>         // _fileno/stdout
 #endif
-#include <cpprest/json.h>
+#include <cpprest/json.h>  // web::json
 
 using namespace std;
 using namespace utility;

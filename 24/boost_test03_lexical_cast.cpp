@@ -1,7 +1,7 @@
-#include <iostream>
-#include <stdexcept>
-#include <string>
-#include <boost/lexical_cast.hpp>
+#include <iostream>                // std::cout/endl
+#include <stdexcept>               // std::invalid_argument
+#include <string>                  // std::string/stoi
+#include <boost/lexical_cast.hpp>  // boost::lexical_cast/bad_lexical_cast
 
 using namespace std;
 using boost::bad_lexical_cast;

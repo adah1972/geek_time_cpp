@@ -1,6 +1,6 @@
-#include <experimental/ranges/ranges>
-#include <iostream>
-#include "fibonacci.hpp"
+#include <experimental/ranges/ranges>  // ranges::views
+#include <iostream>                    // std::cout/endl
+#include "fibonacci.hpp"               // fibonacci
 
 using namespace std;
 

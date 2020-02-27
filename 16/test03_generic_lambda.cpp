@@ -1,6 +1,6 @@
-#include <array>    // std::array
-#include <iostream> // std::cout/endl
-#include <numeric>  // std::accumulate
+#include <array>     // std::array
+#include <iostream>  // std::cout/endl
+#include <numeric>   // std::accumulate
 
 using namespace std;
 

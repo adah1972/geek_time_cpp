@@ -1,8 +1,9 @@
-#include <memory>
-#include "spdlog/async.h"
-#include "spdlog/sinks/rotating_file_sink.h"
-#include "spdlog/sinks/stdout_color_sinks.h"
-#include "spdlog/spdlog.h"
+#include <memory>                             // std::shared_ptr/make_shared
+#include <string>                             // std::string
+#include "spdlog/async.h"                     // spdlog::async_logger
+#include "spdlog/sinks/rotating_file_sink.h"  // rotating_file_sink_mt
+#include "spdlog/sinks/stdout_color_sinks.h"  // stdout_color_sink_mt
+#include "spdlog/spdlog.h"                    // spdlog
 
 using namespace std;
 using namespace spdlog::sinks;

@@ -1,5 +1,5 @@
-#include <iostream>
-#include <queue>
+#include <iostream>  // std::cout/endl
+#include <queue>     // std::queue
 
 int main()
 {
