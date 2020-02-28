@@ -16,7 +16,6 @@ int main()
     std::wcout.imbue(std::locale());
 #endif
     std::wcout << L"中文 Español Français\n";
-    std::wcout << "Narrow characters are "
-                  "also OK on wcout\n";
+    std::wcout << "Narrow characters are also OK on wcout\n";
     // but not on cout...
 }

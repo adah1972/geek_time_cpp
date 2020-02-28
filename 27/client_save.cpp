@@ -53,9 +53,7 @@ auto get_request(string_t uri)
                     .then([&fs](size_t size) {
                         // 然后关闭流
                         fs.close();
-                        tcout << size
-                              << U(" bytes "
-                                   "saved\n");
+                        tcout << size << U(" bytes saved\n");
                     })
                     .wait();
             } else {
