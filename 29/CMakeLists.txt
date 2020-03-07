@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10)
 project(range_examples)
 
 if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
