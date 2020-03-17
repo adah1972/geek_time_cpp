@@ -1,0 +1,11 @@
+-std=c++17
+-D ELPP_FEATURE_CRASH_LOG
+-D ELPP_FEATURE_PERFORMANCE_TRACKING
+-D ELPP_NO_DEFAULT_LOG_FILE
+-D ELPP_PERFORMANCE_MICROSECONDS
+-D ELPP_UNICODE
+-I common
+-I 3rd-party/nvwa
+-I 3rd-party/cmcstl2/include
+-I 3rd-party/cppcoro/include
+-I 3rd-party/expected/include
