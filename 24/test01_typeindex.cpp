@@ -10,7 +10,7 @@ using boost::typeindex::type_id_with_cvr;
 
 class shape {
 public:
-    virtual ~shape() {}
+    virtual ~shape() = default;
 };
 
 class circle : public shape {};
