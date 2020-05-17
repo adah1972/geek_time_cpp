@@ -73,7 +73,7 @@ std::ostream& operator<<(std::ostream& os, const std::pair<T, U>& pr);
 // have its value type as std::pair
 template <typename T, typename Cont>
 auto output_element(std::ostream& os, const T& element,
-                    const Cont&, const std::true_type)
+                    const Cont&, std::true_type)
     -> decltype(std::declval<typename Cont::key_type>(), os);
 // Element output function for other containers
 template <typename T, typename Cont>
@@ -122,7 +122,7 @@ auto operator<<(std::ostream& os, const T& container)
 
 template <typename T, typename Cont>
 auto output_element(std::ostream& os, const T& element,
-                    const Cont&, const std::true_type)
+                    const Cont&, std::true_type)
     -> decltype(std::declval<typename Cont::key_type>(), os)
 {
     os << element.first << " => " << element.second;
