@@ -19,7 +19,7 @@ struct bit_count_t {
 };
 
 template <size_t... V>
-bit_count_t<V...> get_bit_count(index_sequence<V...>)
+constexpr bit_count_t<V...> get_bit_count(index_sequence<V...>)
 {
     return bit_count_t<V...>();
 }
