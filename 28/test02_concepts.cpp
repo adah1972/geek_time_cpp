@@ -17,6 +17,11 @@ using namespace experimental::ranges;
 
 #include <concepts>                      // standard concepts
 
+template <typename T>
+concept readable = indirectly_readable<T>;
+template <typename T, typename U>
+concept writable = indirectly_writable<T, U>;
+
 #endif
 
 #else // defined(__cpp_concepts)
