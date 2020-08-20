@@ -1,9 +1,14 @@
+#if __cplusplus > 201703L
+#include <coroutine>               // coroutine_handle/suspend_always
+using std::coroutine_handle;
+using std::suspend_always;
+#else
 #include <experimental/coroutine>  // coroutine_handle/suspend_always
-#include <iostream>                // std::cout/endl
-#include <stdint.h>                // uint64_t
-
 using std::experimental::coroutine_handle;
 using std::experimental::suspend_always;
+#endif
+#include <iostream>                // std::cout/endl
+#include <stdint.h>                // uint64_t
 
 class uint64_resumable {
 public:

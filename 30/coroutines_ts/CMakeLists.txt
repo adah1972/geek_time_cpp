@@ -10,7 +10,7 @@ if(CMAKE_CXX_COMPILER_ID MATCHES Clang)
   endif()
 
 elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
-  add_compile_options(-std=c++17 -fcoroutines -fconcepts)
+  add_compile_options(-std=c++20 -fcoroutines)
 
 elseif(MSVC)
   add_compile_options(/std:c++latest /await)

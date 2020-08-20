@@ -1,15 +1,10 @@
-#if __cpp_concepts < 201811
-
-#include <experimental/ranges/range>  // ranges::begin
-namespace ranges = std::experimental::ranges;
-
-#else
-
+#if __cplusplus > 201703L
 #include <ranges>                     // std::ranges::begin
 namespace ranges = std::ranges;
-
+#else
+#include <experimental/ranges/range>  // ranges::begin
+namespace ranges = std::experimental::ranges;
 #endif
-
 #include <vector>                     // std::vector
 
 std::vector<int> get_data()

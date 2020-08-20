@@ -1,8 +1,17 @@
+#if __cplusplus > 201703L
+#include <algorithm>                      // std::ranges::for_each
+#include <iterator>                       // std::input_iterator
+namespace ranges = std::ranges;
+using std::ranges::for_each;
+using std::input_iterator;
+#else
 #include <experimental/ranges/algorithm>  // ranges::for_each
 #include <experimental/ranges/iterator>   // ranges::input_iterator
+namespace ranges = std::experimental::ranges;
+using ranges::for_each;
+using ranges::input_iterator;
+#endif
 #include <iostream>                       // std::cout/endl
-
-using namespace std::experimental::ranges;
 
 struct null_sentinel {};
 
@@ -36,6 +45,6 @@ int main(int argc, char* argv[])
         std::cout << "Please provide an argument!" << std::endl;
         return 1;
     }
-    for_each(argv[1], null_sentinel(), [](char ch) { std::cout << ch; });
+    for_each(argv[1], null_sentinel{}, [](char ch) { std::cout << ch; });
     std::cout << std::endl;
 }
