@@ -19,7 +19,8 @@ else(WIN32)
   # Linux and macOS
   set(USED_LIBS
     cpprest
-    cpprestsdk::cpprestsdk_openssl_internal
+    ssl
+    crypto
     Boost::chrono
     Boost::system
     Boost::thread
