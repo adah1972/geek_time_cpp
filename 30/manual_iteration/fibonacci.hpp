@@ -69,4 +69,15 @@ inline fibonacci::sentinel fibonacci::end() noexcept
     return sentinel();
 }
 
+#if __cplusplus > 201703L && __has_include(<ranges>)
+#include <ranges>
+
+namespace std::ranges {
+
+template <>
+inline constexpr bool enable_borrowed_range<fibonacci> = true;
+
+}
+#endif
+
 #endif // FIBONACCI_HPP
