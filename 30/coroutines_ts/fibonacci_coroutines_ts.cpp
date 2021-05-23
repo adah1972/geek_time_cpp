@@ -19,8 +19,8 @@ public:
         {
             return uint64_resumable{coro_handle::from_promise(*this)};
         }
-        constexpr auto initial_suspend() { return suspend_always(); }
-        constexpr auto final_suspend() { return suspend_always(); }
+        constexpr auto initial_suspend() noexcept { return suspend_always(); }
+        constexpr auto final_suspend() noexcept { return suspend_always(); }
         auto yield_value(uint64_t value)
         {
             value_ = value;
