@@ -14,7 +14,10 @@ add_executable(test_optional     test_optional.cpp)
 if(NOT CMAKE_CXX_COMPILER_ID MATCHES GNU OR
    CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 8)
 # GCC 7 (or lower) does not support non-trivial designated initializers
+if(NOT CMAKE_CXX_COMPILER_ID STREQUAL Clang)
+# Clang also has troubles with this code
 add_executable(test_tagged_union test_tagged_union.cpp)
+endif()
 endif()
 add_executable(test_variant      test_variant.cpp)
 add_executable(test_expected     test_expected.cpp)

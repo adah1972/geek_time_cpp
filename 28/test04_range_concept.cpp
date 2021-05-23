@@ -8,7 +8,7 @@ using namespace std;
 
 #if defined(__cpp_concepts)
 
-#if __cpp_concepts < 201811
+#if __cpp_concepts < 201811 || !__has_include(<ranges>)
 
 #include <experimental/ranges/concepts>  // concepts defined in ranges
 using namespace experimental::ranges;

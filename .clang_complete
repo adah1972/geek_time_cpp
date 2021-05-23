@@ -1,4 +1,4 @@
--std=c++17
+-std=c++2a
 -fcoroutines-ts
 -D ELPP_FEATURE_CRASH_LOG
 -D ELPP_FEATURE_PERFORMANCE_TRACKING

@@ -1,6 +1,6 @@
 #include <iostream>                      // std::cout/endl
 
-#if __cpp_concepts < 201811
+#if __cpp_concepts < 201811 || !__has_include(<ranges>)
 
 #include <experimental/ranges/concepts>  // ranges::integral
 using std::experimental::ranges::integral;
