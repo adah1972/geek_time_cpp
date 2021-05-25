@@ -5,6 +5,21 @@ using namespace std;
 
 struct StringIntChar {
     enum { String, Int, Char } type;
+    StringIntChar(string value)
+        : type(String)
+        , string_value(std::move(value))
+    {
+    }
+    StringIntChar(int value)
+        : type(Int)
+        , int_value(value)
+    {
+    }
+    StringIntChar(char value)
+        : type(Char)
+        , char_value(value)
+    {
+    }
     ~StringIntChar()
     {
         if (type == String) {
@@ -20,7 +35,6 @@ struct StringIntChar {
 
 int main()
 {
-    StringIntChar obj{.type = StringIntChar::String,
-                      .string_value = "Hello world"s};
+    StringIntChar obj{"Hello world"s};
     cout << obj.string_value << endl;
 }
