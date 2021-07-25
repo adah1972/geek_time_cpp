@@ -1,5 +1,6 @@
 #include <iostream>  // std::cout/endl
 #include <string>    // std::string
+#include <utility>   // std::move
 
 using namespace std;
 

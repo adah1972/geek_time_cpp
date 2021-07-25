@@ -1,6 +1,8 @@
 #include "nvwa/split.h"              // nvwa::split
+#include <cstddef>                   // std::size_t
 #include <string>                    // std::string
 #include <string_view>               // std::string_view
+#include <vector>                    // std::vector
 #include <boost/test/unit_test.hpp>  // BOOST_TEST/...
 
 using namespace std;

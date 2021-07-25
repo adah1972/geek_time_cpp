@@ -1,7 +1,7 @@
 ﻿#include <iostream>        // std::cout/cerr/endl/wcout
-#include <string>          // std::string
 #include <utility>         // std::move
 #include <assert.h>        // assert
+#include <stdint.h>        // uint64_t
 #ifdef _WIN32
 #include <fcntl.h>         // _O_WTEXT
 #include <io.h>            // _setmode

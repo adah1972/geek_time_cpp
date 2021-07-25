@@ -2,7 +2,6 @@
 #include <iostream>             // std::cout/endl
 #include <map>                  // std::map
 #include <string>               // std::string
-#include <vector>               // std::vector
 #include <nvwa/c++_features.h>  // NVWA_USES_CXX17
 
 using namespace std;

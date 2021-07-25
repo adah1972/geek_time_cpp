@@ -3,6 +3,7 @@
 #include <io.h>             // _setmode
 #include <stdio.h>          // _fileno/stdout
 #else
+#include <iostream>         // std::wcout
 #include <locale>           // std::locale
 #endif
 #include "easylogging++.h"  // easylogging++

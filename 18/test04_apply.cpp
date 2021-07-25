@@ -1,4 +1,3 @@
-#include <iostream>     // std::cout/endl
 #include <tuple>        // std::tuple/make_tuple/get
 #include <type_traits>  // std::remove_reference_t
 #include <utility>      // std::forward

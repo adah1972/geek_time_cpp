@@ -1,7 +1,7 @@
 #include <functional>          // std::greater
 #include <iostream>            // std::cout/endl
-#include <memory>              // std::pair
 #include <queue>               // std::priority_queue
+#include <utility>             // std::pair
 #include <vector>              // std::vector
 #include "output_container.h"  // operator<< for containers
 

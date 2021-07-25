@@ -7,6 +7,7 @@ using std::suspend_always;
 using std::experimental::coroutine_handle;
 using std::experimental::suspend_always;
 #endif
+#include <exception>               // std::terminate
 #include <iostream>                // std::cout/endl
 #include <stdint.h>                // uint64_t
 
