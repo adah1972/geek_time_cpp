@@ -6,7 +6,7 @@
 -D ELPP_PERFORMANCE_MICROSECONDS
 -D ELPP_UNICODE
 -I common
--I 3rd-party/nvwa
--I 3rd-party/cmcstl2/include
--I 3rd-party/cppcoro/include
--I 3rd-party/expected/include
+-I third-party/nvwa
+-I third-party/cmcstl2/include
+-I third-party/cppcoro/include
+-I third-party/expected/include
