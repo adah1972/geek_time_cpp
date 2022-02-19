@@ -11,4 +11,5 @@ endif()
 
 add_executable(arma_test arma_test.cpp)
 
+include_directories(${ARMADILLO_INCLUDE_DIRS})
 target_link_libraries(arma_test PRIVATE ${ARMADILLO_LIBRARIES})

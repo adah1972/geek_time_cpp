@@ -11,6 +11,7 @@ endif()
 
 if(Armadillo_FOUND)
 add_executable(rv_test01_arma        test01_arma.cpp)
+include_directories(${ARMADILLO_INCLUDE_DIRS})
 target_link_libraries(rv_test01_arma PRIVATE ${ARMADILLO_LIBRARIES})
 endif()
 
