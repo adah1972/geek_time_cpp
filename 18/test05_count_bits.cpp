@@ -1,4 +1,4 @@
-#include <cstddef>   // size_t
+#include <cstddef>   // std::size_t
 #include <iostream>  // std::cout
 #include <utility>   // std::make_index_sequence
 
