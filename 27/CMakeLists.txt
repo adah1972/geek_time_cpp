@@ -18,7 +18,7 @@ if(WIN32)
 else(WIN32)
   # Linux and macOS
   set(USED_LIBS
-    cpprest
+    cpprestsdk::cpprest
     ssl
     crypto
     Boost::chrono
@@ -32,6 +32,7 @@ add_executable(client_save client_save.cpp)
 add_executable(server      server.cpp)
 add_executable(test_json   test_json.cpp)
 
+include_directories(${CPPRESTSDK_INCLUDE_DIRS})
 target_link_libraries(client      PRIVATE ${USED_LIBS})
 target_link_libraries(client_save PRIVATE ${USED_LIBS})
 target_link_libraries(server      PRIVATE ${USED_LIBS})
