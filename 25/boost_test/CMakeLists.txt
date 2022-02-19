@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(Boost_USE_MULTITHREADED OFF)
 find_package(Boost REQUIRED unit_test_framework)
 
-include_directories(../../3rd-party/nvwa)
+include_directories(../../third-party/nvwa)
 
 # The following line is necessary at least on CentOS 7 with Boost 1.67
 add_compile_options(-DBOOST_TEST_DYN_LINK)

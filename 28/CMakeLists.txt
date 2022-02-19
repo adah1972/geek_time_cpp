@@ -26,7 +26,7 @@ if(HAVE_ARMA)
   add_compile_options(-DHAVE_ARMA)
 endif()
 
-include_directories(../3rd-party/cmcstl2/include)
+include_directories(../third-party/cmcstl2/include)
 include_directories(../common)
 
 add_executable(cncpt_test01_integral_concept test01_integral_concept.cpp)

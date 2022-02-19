@@ -1,12 +1,12 @@
 [submodule "3rd-party/cmcstl2"]
-	path = 3rd-party/cmcstl2
+	path = third-party/cmcstl2
 	url = https://github.com/CaseyCarter/cmcstl2.git
 [submodule "3rd-party/cppcoro"]
-	path = 3rd-party/cppcoro
+	path = third-party/cppcoro
 	url = https://github.com/lewissbaker/cppcoro.git
 [submodule "3rd-party/nvwa"]
-	path = 3rd-party/nvwa
+	path = third-party/nvwa
 	url = https://github.com/adah1972/nvwa.git
 [submodule "3rd-party/expected"]
-	path = 3rd-party/expected
+	path = third-party/expected
 	url = https://github.com/TartanLlama/expected.git

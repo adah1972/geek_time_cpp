@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(Threads)
 
-include_directories(../3rd-party/nvwa)
+include_directories(../third-party/nvwa)
 
 add_executable(fo_test01_function_object test01_function_object.cpp)
 add_executable(fo_test02_lambda_capture  test02_lambda_capture.cpp)

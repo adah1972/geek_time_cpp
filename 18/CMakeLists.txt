@@ -3,7 +3,7 @@ project(variadic_template_examples)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(../3rd-party/nvwa)
+include_directories(../third-party/nvwa)
 
 add_executable(vt_test01_sum        test01_sum.cpp)
 add_executable(vt_test02_compose    test02_compose.cpp)

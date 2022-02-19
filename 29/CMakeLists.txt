@@ -13,8 +13,8 @@ else()
   message(FATAL_ERROR "Unrecognized compiler")
 endif()
 
-include_directories(../3rd-party/cmcstl2/include)
-include_directories(../3rd-party/nvwa)
+include_directories(../third-party/cmcstl2/include)
+include_directories(../third-party/nvwa)
 
 add_executable(rg_test01_sort               test01_sort.cpp)
 add_executable(rg_test02_reverse_view       test02_reverse_view.cpp)

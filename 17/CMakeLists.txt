@@ -3,7 +3,7 @@ project(functional_examples)
 
 set(CMAKE_CXX_STANDARD 17)
 
-include_directories(../3rd-party/nvwa)
+include_directories(../third-party/nvwa)
 
 add_executable(fn_test01_count_lines test01_count_lines.cpp)
 if(MSVC)
