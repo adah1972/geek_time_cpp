@@ -21,6 +21,7 @@ endif()
 
 if(Armadillo_FOUND)
   set(HAVE_ARMA 1)
+  include_directories(${ARMADILLO_INCLUDE_DIRS})
 endif()
 if(HAVE_ARMA)
   add_compile_options(-DHAVE_ARMA)
