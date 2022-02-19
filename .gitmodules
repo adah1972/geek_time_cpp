@@ -3,7 +3,7 @@
 	url = https://github.com/CaseyCarter/cmcstl2.git
 [submodule "3rd-party/cppcoro"]
 	path = third-party/cppcoro
-	url = https://github.com/lewissbaker/cppcoro.git
+	url = https://github.com/andreasbuhr/cppcoro.git
 [submodule "3rd-party/nvwa"]
 	path = third-party/nvwa
 	url = https://github.com/adah1972/nvwa.git
