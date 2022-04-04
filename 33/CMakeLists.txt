@@ -5,7 +5,20 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(../common)
 
-add_compile_options(-O2)
+if(NOT CMAKE_BUILD_TYPE)
+  add_compile_options(-O2)
+endif()
+
+foreach(CompilerFlag
+    CMAKE_CXX_FLAGS_RELEASE
+    CMAKE_CXX_FLAGS_RELWITHDEBINFO
+    CMAKE_CXX_FLAGS_MINSIZEREL
+    CMAKE_C_FLAGS_RELEASE
+    CMAKE_C_FLAGS_RELWITHDEBINFO
+    CMAKE_C_FLAGS_MINSIZEREL)
+  string(REGEX REPLACE "(^| )[/-]D *NDEBUG($| )" " "
+         "${CompilerFlag}" "${${CompilerFlag}}")
+endforeach()
 
 add_executable(perf_test01_puzzle       test01_puzzle.cpp)
 add_executable(perf_test02_volatile     test02_volatile.cpp)
