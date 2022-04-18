@@ -1,4 +1,5 @@
 #include <mutex>     // std::mutex/lock_guard
+#include <stdint.h>  // uint64_t
 #include <stdio.h>   // printf
 #include <string.h>  // memset
 #include "rdtsc.h"   // rdtsc

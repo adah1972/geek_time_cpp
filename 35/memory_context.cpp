@@ -1,12 +1,15 @@
 #include "memory_context.h"  // context/checkpoint
 #include <cstddef>           // std::size_t/byte
+#include <cstdint>           // std::uint32_t
 #include <cstdio>            // std::printf/puts
-#include <cstdlib>           // std::abort
+#include <cstdlib>           // std::abort/malloc/free
+#include <deque>             // std::deque
 #include <new>               // placement new
 #include <stack>             // std::stack
+#include <type_traits>       // std::true_type
 
 #ifdef _WIN32
-#include <malloc.h>
+#include <malloc.h>          // _aligned_malloc/_aligned_free
 #endif
 
 using namespace std;

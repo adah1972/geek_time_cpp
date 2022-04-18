@@ -1,5 +1,4 @@
 #include <mutex>       // std::mutex/lock_guard
-#include <stdio.h>     // printf
 #include <string.h>    // memset
 #include "profiler.h"  // PROFILE_CHECK
 
