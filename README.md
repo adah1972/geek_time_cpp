@@ -1,6 +1,6 @@
-# 现代 C++ 实战 30 讲示例代码
+# 现代 C++ 编程实战示例代码
 
-这里存放的是[现代 C++ 实战 30 讲](https://time.geekbang.org/column/256)的示例代码。构建代码需要 CMake 和下列编译器之一：
+这里存放的是[现代 C++ 编程实战](https://time.geekbang.org/column/256)的示例代码。构建代码需要 CMake 和下列编译器之一：
 
 - MSVC（Visual Studio）2019 16.4.4 或更新版本
 - GCC 7 或更新版本
