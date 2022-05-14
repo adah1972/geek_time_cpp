@@ -1,8 +1,9 @@
 #ifndef SMART_PTR_H
 #define SMART_PTR_H
 
-#include <atomic>   // std::atomic
-#include <utility>  // std::swap
+#include <atomic>     // std::atomic
+#include <utility>    // std::swap
+#include "finally.h"  // finally
 
 class shared_count {
 public:
@@ -37,7 +38,9 @@ public:
         : ptr_(ptr)
     {
         if (ptr) {
+            auto release_ptr_action = finally([ptr] { delete ptr; });
             shared_count_ = new shared_count();
+            release_ptr_action.reset();
         }
     }
     ~smart_ptr()
