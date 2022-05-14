@@ -25,7 +25,7 @@ public:
         }
     }
 
-    void reset() noexcept { is_active_ = false; }
+    void dismiss() noexcept { is_active_ = false; }
 
 private:
     T action_;

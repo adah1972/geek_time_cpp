@@ -40,7 +40,7 @@ public:
         if (ptr) {
             auto release_ptr_action = finally([ptr] { delete ptr; });
             shared_count_ = new shared_count();
-            release_ptr_action.reset();
+            release_ptr_action.dismiss();
         }
     }
     ~smart_ptr()
