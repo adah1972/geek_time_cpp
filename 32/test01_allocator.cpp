@@ -66,6 +66,18 @@ public:
     }
 };
 
+template <class T>
+constexpr bool operator==(const verbose_alloc<T>&, const verbose_alloc<T>&)
+{
+    return true;
+}
+
+template <class T>
+constexpr bool operator!=(const verbose_alloc<T>&, const verbose_alloc<T>&)
+{
+    return false;
+}
+
 int main()
 {
     cout << "*** Entering main" << endl;
