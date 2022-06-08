@@ -67,7 +67,7 @@ void test_checked_exec(int n, const char* file)
          << endl;
 }
 
-} // namespace my
+}  // namespace my
 
 int main(int argc, char* argv[])
 {
