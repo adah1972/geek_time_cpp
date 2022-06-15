@@ -39,7 +39,7 @@ struct cts_wrapper {
 };
 
 #define CTS_STRING(x)     cts_wrapper<STR(x)>{}
-#define CTS_GET_VALUE(x)  (decltype(x)::str.value)
+#define CTS_GET_VALUE(x)  (std::remove_cvref_t<decltype(x)>::str.value)
 
 #elif defined(__GNUC__)
 
@@ -67,7 +67,7 @@ constexpr compile_time_string<Cs...> operator""_cts()
 #pragma GCC diagnostic pop
 
 #define CTS_STRING(x)     PASTE(STR(x), _cts)
-#define CTS_GET_VALUE(x)  ((x).value)
+#define CTS_GET_VALUE(x)  (std::decay_t<decltype(x)>::value)
 
 #else
 
