@@ -11,5 +11,5 @@ else()
   set(CMAKE_CXX_STANDARD 20)
 endif()
 
-add_executable(cts_test01_carg test01_carg.cpp )
-add_executable(cts_test02_cts  test02_cts.cpp)
+add_executable(test_carg test_carg.cpp )
+add_executable(test_cts  test_cts.cpp)
