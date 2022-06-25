@@ -199,13 +199,15 @@
 #define REPEAT_99(func, i, arg, ...)  func(i, arg) REPEAT_98(func, i + 1, __VA_ARGS__)
 #define REPEAT_100(func, i, arg, ...)  func(i, arg) REPEAT_99(func, i + 1, __VA_ARGS__)
 
-#define STR(x) #x
 #define CONCAT(x, y) x##y
+#define PASTE(x, y) CONCAT(x, y)
+
+#define STR(x) #x
 #define STRING(x) STR(x)
+
 #define PARE(...) __VA_ARGS__
 #define EAT(...)
-#define PAIR(x) PARE x // PAIR((int) x) => PARE(int) x => int x
-#define STRIP(x) EAT x // STRIP((int) x) => EAT(int) x => x
-#define PASTE(x, y) CONCAT(x, y)
+#define PAIR(x) PARE x  // PAIR((int) x) => PARE(int) x => int x
+#define STRIP(x) EAT x  // STRIP((int) x) => EAT(int) x => x
 
 #endif // METAMACRO_H
