@@ -199,6 +199,9 @@
 #define REPEAT_99(func, i, arg, ...)  func(i, arg) REPEAT_98(func, i + 1, __VA_ARGS__)
 #define REPEAT_100(func, i, arg, ...)  func(i, arg) REPEAT_99(func, i + 1, __VA_ARGS__)
 
+#define REPEAT_ON(func, ...) \
+    PASTE(REPEAT_, GET_ARG_COUNT(__VA_ARGS__))(func, 0, __VA_ARGS__)
+
 #define CONCAT(x, y) x##y
 #define PASTE(x, y) CONCAT(x, y)
 

@@ -32,7 +32,7 @@
 #include <type_traits>            // std::is_same_v
 #include <utility>                // std::forward/(make_)index_sequence
 #include "compile_time_string.h"  // CTS_STRING
-#include "metamacro.h"            // GET_ARG_COUNT/PAIR/PASTE/REPEAT_.../STRIP
+#include "metamacro.h"            // GET_ARG_COUNT/PAIR/PASTE/REPEAT_ON/STRIP
 
 #define FIELD(i, arg)                                                      \
     PAIR(arg);                                                             \
@@ -53,7 +53,7 @@
         template <typename, std::size_t>                                   \
         struct _field;                                                     \
         static constexpr std::size_t _size = GET_ARG_COUNT(__VA_ARGS__);   \
-        PASTE(REPEAT_, GET_ARG_COUNT(__VA_ARGS__))(FIELD, 0, __VA_ARGS__)  \
+        REPEAT_ON(FIELD, __VA_ARGS__)                                      \
     }
 
 // This macro can only be used at the global namespace, so it cannot be
