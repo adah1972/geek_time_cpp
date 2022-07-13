@@ -4,6 +4,7 @@
 #include <array>    // std::array
 #include <cassert>  // assert
 #include <cstddef>  // std::size_t
+#include <cstdint>  // std::uintptr_t
 
 template <typename T>
 inline constexpr std::size_t memory_chunk_size = 64;
@@ -74,7 +75,7 @@ T* memory_pool<T>::allocate()
     }
 
     T* result = &free_list_->data;
-    assert(reinterpret_cast<uintptr_t>(result) % sizeof(T*) == 0);
+    assert(reinterpret_cast<std::uintptr_t>(result) % sizeof(T*) == 0);
     free_list_ = free_list_->next;
     return result;
 }
@@ -82,7 +83,7 @@ T* memory_pool<T>::allocate()
 template <typename T>
 void memory_pool<T>::deallocate(T* ptr)
 {
-    assert(reinterpret_cast<uintptr_t>(ptr) % sizeof(T*) == 0);
+    assert(reinterpret_cast<std::uintptr_t>(ptr) % sizeof(T*) == 0);
     auto free_item = reinterpret_cast<node*>(ptr);
     free_item->next = free_list_;
     free_list_ = free_item;
