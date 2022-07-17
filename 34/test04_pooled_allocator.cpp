@@ -7,6 +7,7 @@ using namespace std;
 
 using TestType =
     unordered_set<int, hash<int>, equal_to<int>, pooled_allocator<int>>;
+thread_local TestType s;
 
 int main()
 {
@@ -15,6 +16,5 @@ int main()
     thread t{[] {}};
     t.join();
 
-    TestType s;
     test_container(s);
 }

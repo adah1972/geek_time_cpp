@@ -33,7 +33,15 @@ struct pooled_allocator : private Base {
         using other = pooled_allocator<U>;
     };
 
-    pooled_allocator() = default;
+    pooled_allocator()
+    {
+        // Ensure the early creation of the memory pool.  Without this
+        // call, a thread-local object may have lifetime issues using
+        // this memory pool -- the memory pool may be destroyed earlier
+        // than the object.  Also notice that a global/static object
+        // generally cannot use this (thread-local) allocator safely.
+        (void)get_memory_pool<T>();
+    }
 
     template <class U>
     pooled_allocator(const pooled_allocator<U>&)
