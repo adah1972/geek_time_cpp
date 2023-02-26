@@ -1,4 +1,12 @@
 #include <vector>              // std::vector
+
+#if defined(USE_FMT_RANGES) && __has_include(<fmt/ranges.h>)
+
+#include <fmt/ranges.h>
+#include <spdlog/spdlog.h>
+
+#else
+
 #include "output_container.h"  // operator<< for containers
 
 #include <spdlog/spdlog.h>     // spdlog
@@ -6,6 +14,8 @@
 
 #if FMT_VERSION >= 90000
 template <> struct fmt::formatter<std::vector<int>> : ostream_formatter {};
+#endif
+
 #endif
 
 using namespace std;
