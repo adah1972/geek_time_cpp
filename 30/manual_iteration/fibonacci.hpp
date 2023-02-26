@@ -61,7 +61,7 @@ bool operator!=(const fibonacci::sentinel& lhs,
 
 inline fibonacci::iterator fibonacci::begin() noexcept
 {
-  return iterator();
+    return iterator();
 }
 
 inline fibonacci::sentinel fibonacci::end() noexcept
