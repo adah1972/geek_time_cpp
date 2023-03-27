@@ -6,11 +6,11 @@ if(CMAKE_CXX_COMPILER_ID MATCHES Clang)
     add_compile_options(/std:c++latest
                         -fms-compatibility -Xclang -fcoroutines-ts)
   elseif(UNIX OR APPLE)
-    add_compile_options(-std=c++17 -stdlib=libc++ -fcoroutines-ts)
+    add_compile_options(-std=c++17 -fcoroutines-ts)
   endif()
 
 elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
-  add_compile_options(-std=c++17 -fcoroutines -fconcepts)
+  add_compile_options(-std=c++20 -fcoroutines)
   set(HAVE_CONCEPTS 1)
 
 elseif(MSVC)
