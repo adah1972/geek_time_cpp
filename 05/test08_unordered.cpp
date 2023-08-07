@@ -6,10 +6,8 @@
 
 using namespace std;
 
-namespace std {
-
 template <typename T>
-struct hash<complex<T>> {
+struct complex_hash {
     size_t operator()(const complex<T>& v) const noexcept
     {
         hash<T> h;
@@ -17,14 +15,12 @@ struct hash<complex<T>> {
     }
 };
 
-}  // namespace std
-
 int main()
 {
     unordered_set<int> s{1, 1, 2, 3, 5, 8, 13, 21};
     cout << s << endl;
 
-    unordered_map<complex<double>, double> umc{{{1.0, 1.0}, 1.4142},
-                                               {{3.0, 4.0}, 5.0}};
+    unordered_map<complex<double>, double, complex_hash<double>> umc{
+        {{1.0, 1.0}, 1.4142}, {{3.0, 4.0}, 5.0}};
     cout << umc << endl;
 }
