@@ -1,7 +1,7 @@
 /*
  * MIT License
  *
- * Copyright (c) 2022 Wu Yongwei
+ * Copyright (c) 2022-2023 Wu Yongwei
  *
  * Permission is hereby granted, free of charge, to any person obtaining a
  * copy of this software and associated documentation files (the "Software"),
@@ -27,7 +27,7 @@
 #define COMPILE_TIME_STRING_H
 
 #include <cstddef>      // std::size_t
-#include "metamacro.h"  // PASTE
+#include "metamacro.h"  // PASTE/STR
 
 #if __cplusplus >= 202002L || (defined(_MSVC_LANG) && _MSVC_LANG >= 202002L)
 
