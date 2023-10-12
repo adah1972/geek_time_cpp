@@ -20,7 +20,7 @@ else()
 endif()
 
 if(Armadillo_FOUND)
-  set(HAVE_ARMA 1)
+  set(HAVE_ARMA ON)
   include_directories(${ARMADILLO_INCLUDE_DIRS})
 endif()
 if(HAVE_ARMA)

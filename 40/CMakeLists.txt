@@ -17,4 +17,4 @@ endif()
 
 include_directories(../common)
 
-add_executable(test_static_reflection test_static_reflection.cpp )
+add_executable(test_static_reflection test_static_reflection.cpp)

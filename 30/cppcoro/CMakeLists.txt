@@ -11,11 +11,11 @@ if(CMAKE_CXX_COMPILER_ID MATCHES Clang)
 
 elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
   add_compile_options(-std=c++20 -fcoroutines)
-  set(HAVE_CONCEPTS 1)
+  set(HAVE_CONCEPTS ON)
 
 elseif(MSVC)
   add_compile_options(/std:c++latest /await /permissive-)
-  set(HAVE_CONCEPTS 1)
+  set(HAVE_CONCEPTS ON)
 
 else()
   message(FATAL_ERROR "Unrecognized compiler")
