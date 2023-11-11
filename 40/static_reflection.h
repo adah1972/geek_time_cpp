@@ -41,7 +41,7 @@
         _field(T&& obj) : obj_(std::forward<T>(obj)) {} /* NOLINT */       \
         static constexpr auto name = CTS_STRING(STRIP(arg));               \
         using type = decltype(std::decay_t<T>::STRIP(arg));                \
-        auto value() -> decltype(auto)                                     \
+        decltype(auto) value()                                             \
         {                                                                  \
             return (std::forward<T>(obj_).STRIP(arg));                     \
         }                                                                  \
