@@ -7,10 +7,7 @@
 
 class shared_count {
 public:
-    shared_count() noexcept
-        : count_(1)
-    {
-    }
+    shared_count() noexcept : count_(1) {}
     void add_count() noexcept
     {
         count_.fetch_add(1, std::memory_order_relaxed);
@@ -34,8 +31,7 @@ public:
     template <typename U>
     friend class smart_ptr;
 
-    explicit smart_ptr(T* ptr = nullptr)
-        : ptr_(ptr)
+    explicit smart_ptr(T* ptr = nullptr) : ptr_(ptr)
     {
         if (ptr) {
             auto release_ptr_action = finally([ptr] { delete ptr; });
@@ -51,36 +47,32 @@ public:
         }
     }
 
-    smart_ptr(const smart_ptr& other) noexcept
+    smart_ptr(const smart_ptr& other) noexcept : ptr_(other.ptr_)
     {
-        ptr_ = other.ptr_;
         if (ptr_) {
             other.shared_count_->add_count();
             shared_count_ = other.shared_count_;
         }
     }
     template <typename U>
-    smart_ptr(const smart_ptr<U>& other) noexcept
+    smart_ptr(const smart_ptr<U>& other) noexcept : ptr_(other.ptr_)
     {
-        ptr_ = other.ptr_;
         if (ptr_) {
             other.shared_count_->add_count();
             shared_count_ = other.shared_count_;
         }
     }
     template <typename U>
-    smart_ptr(smart_ptr<U>&& other) noexcept
+    smart_ptr(smart_ptr<U>&& other) noexcept : ptr_(other.ptr_)  // NOLINT
     {
-        ptr_ = other.ptr_;
         if (ptr_) {
             shared_count_ = other.shared_count_;
             other.ptr_ = nullptr;
         }
     }
     template <typename U>
-    smart_ptr(const smart_ptr<U>& other, T* ptr) noexcept
+    smart_ptr(const smart_ptr<U>& other, T* ptr) noexcept : ptr_(ptr)
     {
-        ptr_ = ptr;
         if (ptr_) {
             other.shared_count_->add_count();
             shared_count_ = other.shared_count_;
