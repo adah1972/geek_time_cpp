@@ -10,15 +10,15 @@ public:
     shared_count() noexcept : count_(1) {}
     void add_count() noexcept
     {
-        count_.fetch_add(1, std::memory_order_relaxed);
+        count_.fetch_add(1, std::memory_order_acq_rel);
     }
-    long reduce_count() noexcept
+    bool reduce_count() noexcept
     {
-        return --count_;
+        return count_.fetch_sub(1, std::memory_order_acq_rel) != 1;
     }
     long get_count() const noexcept
     {
-        return count_;
+        return count_.load(std::memory_order_relaxed);
     }
 
 private:
