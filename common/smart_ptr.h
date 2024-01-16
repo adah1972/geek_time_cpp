@@ -10,7 +10,7 @@ public:
     shared_count() noexcept : count_(1) {}
     void add_count() noexcept
     {
-        count_.fetch_add(1, std::memory_order_acq_rel);
+        count_.fetch_add(1, std::memory_order_relaxed);
     }
     bool reduce_count() noexcept
     {
