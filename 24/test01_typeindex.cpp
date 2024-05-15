@@ -34,7 +34,7 @@ int main()
     cout << "*** Using type_id_with_cvr\n";
     cout << type_id_with_cvr<const int>() << endl;
     cout << type_id_with_cvr<decltype((v))>() << endl;
-    cout << type_id_with_cvr<decltype(move((v)))>() << endl;
+    cout << type_id_with_cvr<decltype(std::move((v)))>() << endl;
     cout << type_id_with_cvr<decltype((it))>() << endl;
 
 #define CHECK_TYPE_ID(object, type)                                        \

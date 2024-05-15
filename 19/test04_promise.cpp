@@ -38,7 +38,7 @@ int main()
 {
     promise<int> prom;
     auto fut = prom.get_future();
-    scoped_thread th{work, move(prom)};
+    scoped_thread th{work, std::move(prom)};
     cout << "I am waiting now\n";
     cout << "Answer: " << fut.get() << '\n';
 }

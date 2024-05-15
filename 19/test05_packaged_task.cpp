@@ -38,7 +38,7 @@ int main()
 {
     packaged_task<int()> task{work};
     auto fut = task.get_future();
-    scoped_thread th{move(task)};
+    scoped_thread th{std::move(task)};
     this_thread::sleep_for(1s);
     cout << "I am waiting now\n";
     cout << "Answer: " << fut.get() << '\n';

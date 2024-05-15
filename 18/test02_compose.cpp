@@ -10,7 +10,7 @@ using nvwa::fmap;
 template <typename F>
 auto compose(F f)
 {
-    return [f](auto&&... x) { return f(forward<decltype(x)>(x)...); };
+    return [f](auto&&... x) { return f(std::forward<decltype(x)>(x)...); };
 }
 
 template <typename F,
@@ -18,7 +18,7 @@ template <typename F,
 auto compose(F f, Args... other)
 {
     return [f, other...](auto&&... x) {
-        return f(compose(other...)(forward<decltype(x)>(x)...));
+        return f(compose(other...)(std::forward<decltype(x)>(x)...));
     };
 }
 

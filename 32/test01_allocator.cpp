@@ -51,7 +51,7 @@ public:
 #elif defined(_MSC_VER)
         cout << __FUNCSIG__ << endl;
 #endif
-        ::new((void*)p) U(forward<Args>(args)...);
+        ::new((void*)p) U(std::forward<Args>(args)...);
     }
 
     template <typename U>

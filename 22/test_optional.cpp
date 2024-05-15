@@ -29,13 +29,13 @@ constexpr bool has_value(const optional<T>& first,
 template <typename F>
 auto lift_optional(F&& f)
 {
-    return [f = forward<F>(f)](auto&&... args) {
+    return [f = std::forward<F>(f)](auto&&... args) {
         typedef decay_t<decltype(
-            f(forward<decltype(args)>(args).value()...))>
+            f(std::forward<decltype(args)>(args).value()...))>
             result_type;
         if (has_value(args...)) {
             return optional<result_type>(
-                f(forward<decltype(args)>(args).value()...));
+                f(std::forward<decltype(args)>(args).value()...));
         } else {
             return optional<result_type>();
         }
