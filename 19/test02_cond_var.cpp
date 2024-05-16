@@ -4,31 +4,10 @@
 #include <iostream>            // std::cout
 #include <mutex>               // std::mutex/unique_lock
 #include <thread>              // std::thread/this_thread
-#include <utility>             // std::forward/move
+#include <utility>             // std::move
+#include "scoped_thread.h"     // scoped_thread
 
 using namespace std;
-
-class scoped_thread {
-public:
-    template <typename... Arg>
-    scoped_thread(Arg&&... arg)
-        : thread_(std::forward<Arg>(arg)...)
-    {
-    }
-    scoped_thread(scoped_thread&& other)
-        : thread_(std::move(other.thread_))
-    {
-    }
-    ~scoped_thread()
-    {
-        if (thread_.joinable()) {
-            thread_.join();
-        }
-    }
-
-private:
-    thread thread_;
-};
 
 void work(condition_variable& cv, mutex& cv_mut, bool& result_ready,
           int& result)

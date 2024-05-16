@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 find_package(Threads)
 
+include_directories(../common)
+
 add_executable(thrd_test01_thread        test01_thread.cpp)
 add_executable(thrd_test02_cond_var      test02_cond_var.cpp)
 add_executable(thrd_test03_async         test03_async.cpp)
