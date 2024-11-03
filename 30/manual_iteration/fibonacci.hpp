@@ -48,13 +48,13 @@ private:
 };
 
 // sentinel needs to be equality_comparable_with iterator
-bool operator==(const fibonacci::sentinel& lhs,
-                const fibonacci::iterator& rhs)
+inline bool operator==(const fibonacci::sentinel& lhs,
+                       const fibonacci::iterator& rhs)
 {
     return rhs == lhs;
 }
-bool operator!=(const fibonacci::sentinel& lhs,
-                const fibonacci::iterator& rhs)
+inline bool operator!=(const fibonacci::sentinel& lhs,
+                       const fibonacci::iterator& rhs)
 {
     return rhs != lhs;
 }
