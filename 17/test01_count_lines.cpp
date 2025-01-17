@@ -13,7 +13,7 @@ int count_file(const char* name)
 {
     ifstream ifs(name);
     istream_line_reader reader(ifs);
-    return distance(reader.begin(), reader.end());
+    return static_cast<int>(distance(reader.begin(), reader.end()));
 }
 
 int count_lines(const char** begin, const char** end)
