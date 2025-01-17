@@ -36,7 +36,7 @@ int main()
     print(a);
     print(b);
     print(v);
-    // print(lst); // 无法编译
+    // print(lst); // Cannot compile
     std::cout << '\n';
 
     increase(a);
@@ -46,5 +46,5 @@ int main()
     print(v);
 
     span sp{a};
-    sp[5] = 0;  // 用gsl::span会崩溃
+    sp[5] = 0;  // Crashes when using gsl::span
 }
