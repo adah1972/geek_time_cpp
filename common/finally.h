@@ -63,7 +63,7 @@ public:
     ~on_return_action()
     {
         if (is_active_ &&
-#if __cplusplus >= 201703L
+#if __cpp_lib_uncaught_exceptions >= 201411L
             std::uncaught_exceptions() == 0
 #else
             !std::uncaught_exception()
