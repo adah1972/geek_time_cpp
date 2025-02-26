@@ -9,10 +9,11 @@ class final_action {
 public:
     explicit final_action(T action) : action_(std::move(action)) {}
 
-    final_action(final_action&& other)
-        : action_(std::move(other.action_))
-        , is_active_(std::exchange(other.is_active_, false))
-    {}
+    final_action(final_action&& other) noexcept
+        : action_(std::move(other.action_)),
+          is_active_(std::exchange(other.is_active_, false))
+    {
+    }
 
     final_action(const final_action&) = delete;
     final_action& operator=(const final_action&) = delete;
@@ -25,7 +26,10 @@ public:
         }
     }
 
-    void dismiss() noexcept { is_active_ = false; }
+    void dismiss() noexcept
+    {
+        is_active_ = false;
+    }
 
 private:
     T action_;
