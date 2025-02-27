@@ -8,8 +8,10 @@ if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
     add_compile_options(-std=c++17 -fconcepts)
   endif()
   find_package(Armadillo)
-elseif(CMAKE_CXX_COMPILER_ID STREQUAL Clang AND
-    CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 10.0)
+elseif((CMAKE_CXX_COMPILER_ID STREQUAL Clang AND
+        CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 10.0) OR
+       (CMAKE_CXX_COMPILER_ID STREQUAL AppleClang AND
+        CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 12.0))
   add_compile_options(-std=c++20)
   find_package(Armadillo)
 elseif(MSVC)
