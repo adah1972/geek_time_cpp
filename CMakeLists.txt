@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 project(geek_time_cpp)
 
-find_package(cpprestsdk)
+#find_package(cpprestsdk)
 
 add_subdirectory(01)
 add_subdirectory(02)
@@ -23,9 +23,9 @@ add_subdirectory(24)
 add_subdirectory(25)
 add_subdirectory(26)
 
-if(cpprestsdk_FOUND)
-  add_subdirectory(27)
-endif()
+#if(cpprestsdk_FOUND)
+#  add_subdirectory(27)
+#endif()
 
 if(CMAKE_CXX_COMPILER_ID MATCHES GNU)
   add_subdirectory(28)
