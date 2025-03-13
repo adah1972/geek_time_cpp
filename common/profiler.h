@@ -15,15 +15,19 @@ public:
     profiling_checker(int number);
     ~profiling_checker();
 
+#if __cplusplus >= 201103L
+    profiling_checker(const profiling_checker&) = delete;
+    profiling_checker& operator=(const profiling_checker&) = delete;
+#endif
+
 private:
     int number_;
     uint64_t start_time_;
 };
 
 inline profiling_checker::profiling_checker(int number)
-    : number_(number)
+    : number_(number), start_time_(rdtsc())
 {
-    start_time_ = rdtsc();
 }
 
 #ifdef NDEBUG

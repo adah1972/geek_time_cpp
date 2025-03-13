@@ -51,7 +51,7 @@ void dump_obj(const T& obj, std::ostream& os = std::cout,
 
 namespace data {
 
-using sr::get;  // Necessary for argument-dependent lookup
+using sr::get;  // NOLINT: Necessary for argument-dependent lookup
 
 DEFINE_STRUCT(        //
     S1,               //

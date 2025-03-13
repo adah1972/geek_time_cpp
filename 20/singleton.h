@@ -11,6 +11,9 @@ public:
 
     void do_something();
 
+    singleton(const singleton&) = delete;
+    singleton& operator=(const singleton&) = delete;
+
 private:
     singleton();
     ~singleton();

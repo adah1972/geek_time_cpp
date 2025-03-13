@@ -18,7 +18,7 @@ int main()
     for (int i = 0; i < THREADS; ++i) {
         threads.emplace_back(do_something);
     }
-    for (auto&& thrd : threads) {
+    for (auto& thrd : threads) {
         thrd.join();
     }
     singleton::destroy();

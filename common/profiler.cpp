@@ -6,7 +6,7 @@
 namespace {
 
 struct profiling_data {
-    int number;
+    int number{-1};
     int call_count{};
     uint64_t call_duration{};
 };
@@ -15,6 +15,11 @@ class profiler {
 public:
     profiler();
     ~profiler();
+
+#if __cplusplus >= 201103L
+    profiler(const profiler&) = delete;
+    profiler& operator=(const profiler&) = delete;
+#endif
 
     void add_data(int number, uint64_t duration);
 
@@ -26,7 +31,7 @@ profiler::profiler()
 {
     size_t len = 0;
     for (;;) {
-        if (name_map[len].name == NULL) {
+        if (!name_map[len].name) {
             break;
         }
         ++len;
@@ -52,7 +57,7 @@ profiler::~profiler()
         std::cout << "  Call count: " << item.call_count << '\n';
         std::cout << "  Call duration: " << item.call_duration << '\n';
         std::cout << "  Average duration: "
-                  << item.call_duration * 1.0 /
+                  << static_cast<double>(item.call_duration) /
                          (item.call_count != 0 ? item.call_count : 1)
                   << '\n';
     }
