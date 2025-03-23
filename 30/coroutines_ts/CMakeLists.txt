@@ -17,7 +17,11 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
   add_compile_options(-std=c++20 -fcoroutines)
 
 elseif(MSVC)
-  add_compile_options(/std:c++latest /await)
+  if(MSVC_VERSION GREATER_EQUAL 1930)
+    add_compile_options(/std:c++20 /Zc:__cplusplus)
+  else()
+    add_compile_options(/std:c++latest /await)
+  endif()
 
 else()
   message(FATAL_ERROR "Unrecognized compiler")

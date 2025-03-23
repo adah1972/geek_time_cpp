@@ -19,7 +19,11 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
   set(HAVE_CONCEPTS ON)
 
 elseif(MSVC)
-  add_compile_options(/std:c++latest /await /permissive-)
+  if(MSVC_VERSION GREATER_EQUAL 1930)
+    add_compile_options(/std:c++20 /Zc:__cplusplus)
+  else()
+    add_compile_options(/std:c++latest /await /permissive-)
+  endif()
   set(HAVE_CONCEPTS ON)
 
 else()
