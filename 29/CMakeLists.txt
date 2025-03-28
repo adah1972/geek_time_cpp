@@ -11,7 +11,7 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES Clang AND
     CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL 16.0)
   add_compile_options(-std=c++20)
 elseif(MSVC)
-  add_compile_options(/std:c++latest /permissive- /Zc:__cplusplus)
+  add_compile_options(/std:c++latest /permissive- /Zc:__cplusplus /utf-8)
 else()
   message(FATAL_ERROR "Unrecognized compiler")
 endif()

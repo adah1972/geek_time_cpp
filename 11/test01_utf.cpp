@@ -28,19 +28,19 @@ void to_utf_8(char32_t ch, string& result)
         throw runtime_error("invalid code point");
     }
     if (ch < 0x80) {
-        result += ch;
+        result += static_cast<char>(ch);
     } else if (ch < 0x800) {
-        result += 0xC0 | (ch >> 6);
-        result += 0x80 | (ch & 0x3F);
+        result += static_cast<char>(0xC0 | (ch >> 6));
+        result += static_cast<char>(0x80 | (ch & 0x3F));
     } else if (ch < 0x10000) {
-        result += 0xE0 | (ch >> 12);
-        result += 0x80 | ((ch >> 6) & 0x3F);
-        result += 0x80 | (ch & 0x3F);
+        result += static_cast<char>(0xE0 | (ch >> 12));
+        result += static_cast<char>(0x80 | ((ch >> 6) & 0x3F));
+        result += static_cast<char>(0x80 | (ch & 0x3F));
     } else {
-        result += 0xF0 | (ch >> 18);
-        result += 0x80 | ((ch >> 12) & 0x3F);
-        result += 0x80 | ((ch >> 6) & 0x3F);
-        result += 0x80 | (ch & 0x3F);
+        result += static_cast<char>(0xF0 | (ch >> 18));
+        result += static_cast<char>(0x80 | ((ch >> 12) & 0x3F));
+        result += static_cast<char>(0x80 | ((ch >> 6) & 0x3F));
+        result += static_cast<char>(0x80 | (ch & 0x3F));
     }
 }
 

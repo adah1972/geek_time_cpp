@@ -3,6 +3,10 @@ project(variadic_template_examples)
 
 set(CMAKE_CXX_STANDARD 17)
 
+if(MSVC)
+  add_compile_options(/utf-8)
+endif()
+
 include_directories(../third-party/nvwa)
 
 add_executable(vt_test01_sum        test01_sum.cpp)
