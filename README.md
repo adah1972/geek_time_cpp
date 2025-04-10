@@ -21,17 +21,17 @@ cmake ..
 cmake --build . -j
 ```
 
-最后四步（从 `mkdir build` 到 `cmake --build …`）也可以进入到子目录下进行，只构建那一部分的代码。
+最后四步（从 `mkdir build` 到 `cmake --build …`）也可以进入到子目录下进行，只构建那一部分的代码。在使用 Unix Makefiles（Unix/Linux 下的默认情况）作为 CMake 的实际构建系统（生成器）时，应当在 `-j` 后面加上并发任务的允许数量（否则 GNU Make 不会对并发任务数进行限制）。
 
-在使用 MSVC 时，可以在最后一步时指定构建的类型：Debug、Release、MinSizeRel 或 RelWithDebInfo。比如，下面的命令可指定构建 Release 版本（缺省为 Debug）：
+在使用 MSVC 时，可以在最后一步时指定构建的类型：Debug、Release、MinSizeRel 或 RelWithDebInfo。比如，下面的命令可指定构建 Release 版本（默认为 Debug）：
 
 ```bash
 cmake --build . -j --config Release
 ```
 
-在使用 GCC 和 Clang（Unix Makefiles）时，只能在创建工程文件时指定构建类型（缺省跟一般的命令行一样，非调试、非优化）。比如，下面的命令可指定构建 Debug 版本（我们在 21 讲和 26 讲有例子需要调试符号）：
+在使用 Unix Makefiles（一般使用 GCC 或 Clang 的情况）时，只能在创建工程文件时指定构建类型（默认跟一般的命令行一样，非调试、非优化）。比如，下面的命令可指定构建 Debug 版本（我们在 21 讲和 26 讲有例子需要调试符号）：
 
 ```bash
 cmake .. -DCMAKE_BUILD_TYPE=Debug
-cmake --build . -j
+cmake --build . -j8
 ```
