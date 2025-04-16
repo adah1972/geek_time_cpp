@@ -5,6 +5,10 @@
 using namespace std::chrono;
 using std::cout;
 
+#if __cpp_lib_chrono >= 201907L ||                                         \
+    (__cplusplus >= 202002L && ((!defined(__clang__) && __GNUC__ >= 13) || \
+                                _LIBCPP_VERSION >= 170000))
+
 template <typename T>
 struct is_sys_time : std::false_type {};
 template <typename Duration>
@@ -14,9 +18,6 @@ inline constexpr bool is_sys_time_v = is_sys_time<T>::value;
 
 int main()
 {
-#if __cpp_lib_chrono >= 201907L ||                                         \
-    (__cplusplus >= 202002L && ((!defined(__clang__) && __GNUC__ >= 13) || \
-                                _LIBCPP_VERSION >= 170000))
     cout << 2025y/3/10 << '\n';
     cout << 2025y/March/10d << '\n';
     cout << 10d/3/2025y << '\n';
@@ -37,7 +38,13 @@ int main()
                                  year_month_day_last>);
     static_assert(
         is_sys_time_v<decltype(sys_days{2025y/5/last} + months{1})>);
-#else
-    cout << "C++20 chrono is not fully supported in your environment\n";
-#endif
 }
+
+#else
+
+int main()
+{
+    cout << "C++20 chrono is not fully supported in your environment\n";
+}
+
+#endif
