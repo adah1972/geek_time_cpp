@@ -10,12 +10,14 @@
 
 int main()
 {
+#if !(defined(__GNUC__) && !defined(__clang__) && __GNUC__ < 12)
     static_assert(!(NAN < 1));
     static_assert(!(1 < NAN));
     static_assert(!(1 == NAN));
     static_assert(!(NAN == NAN));
     static_assert(1 != NAN);
     static_assert(NAN != NAN);
+#endif
 
     std::set<Employee> s;
     s.emplace("1", "Liza", 1998, 4080);
