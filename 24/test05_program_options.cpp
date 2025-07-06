@@ -1,9 +1,11 @@
+#include <ios>                        // std::boolalpha
 #include <iostream>                   // std::cout/endl
 #include <string>                     // std::string
 #include <stdlib.h>                   // exit
 #include <boost/program_options.hpp>  // boost::program_options
 
 namespace po = boost::program_options;
+using std::boolalpha;
 using std::cout;
 using std::endl;
 using std::string;
@@ -45,8 +47,11 @@ int main(int argc, char* argv[])
         cout << desc << "\n";
         exit(1);
     }
-    cout << "Locale:   " << locale << endl;
-    cout << "Lang:     " << lang << endl;
-    cout << "Width:    " << width << endl;
-    cout << "Verbose:  " << verbose << endl;
+
+    cout << boolalpha;
+    cout << "Locale:      " << locale << endl;
+    cout << "Lang:        " << lang << endl;
+    cout << "Width:       " << width << endl;
+    cout << "Keep indent: " << keep_indent << endl;
+    cout << "Verbose:     " << verbose << endl;
 }
