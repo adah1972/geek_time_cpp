@@ -3,6 +3,13 @@ project(boost_test_examples)
 
 set(CMAKE_CXX_STANDARD 17)
 
+if(POLICY CMP0074)
+  cmake_policy(SET CMP0074 NEW)
+endif()
+if(POLICY CMP0144)
+  cmake_policy(SET CMP0144 NEW)
+endif()
+
 set(Boost_USE_MULTITHREADED OFF)
 find_package(Boost REQUIRED unit_test_framework)
 

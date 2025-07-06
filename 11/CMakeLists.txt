@@ -3,6 +3,10 @@ project(unicode_examples)
 
 set(CMAKE_CXX_STANDARD 17)
 
+if(POLICY CMP0074)
+  cmake_policy(SET CMP0074 NEW)
+endif()
+
 find_package(ICU COMPONENTS "uc" "io")
 
 add_executable(uc_test01_utf test01_utf.cpp)
