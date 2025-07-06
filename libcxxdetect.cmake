@@ -20,8 +20,8 @@ set(LIBCXX_DETECT_INCLUDED TRUE)
 include(CheckCXXSourceCompiles)
 include(CheckCXXSourceRuns)
 
-# Main detection function
-function(detect_libcxx)
+# Internal detection function
+function(detect_libcxx_impl)
   # Check if libc++ is being used
   check_cxx_source_compiles("
     #include <ciso646>
@@ -110,4 +110,18 @@ function(detect_libcxx)
   else()
     message(STATUS "libc++ not detected")
   endif()
+endfunction()
+
+# Main detection function
+function(detect_libcxx)
+  if(DEFINED LIBCXX_FOUND)
+    return()
+  endif()
+  detect_libcxx_impl()
+  set(LIBCXX_FOUND ${LIBCXX_FOUND} CACHE BOOL "Whether libc++ is found")
+  set(LIBCXX_VERSION ${LIBCXX_VERSION} CACHE STRING "libc++ version")
+  set(LIBCXX_VERSION_MAJOR ${LIBCXX_VERSION_MAJOR} CACHE STRING "libc++ version major")
+  set(LIBCXX_VERSION_MINOR ${LIBCXX_VERSION_MINOR} CACHE STRING "libc++ version minor")
+  set(LIBCXX_VERSION_PATCH ${LIBCXX_VERSION_PATCH} CACHE STRING "libc++ version patch")
+  set(LIBCXX_RAW_VERSION ${LIBCXX_RAW_VERSION} CACHE STRING "libc++ raw version string")
 endfunction()
