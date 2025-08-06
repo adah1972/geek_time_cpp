@@ -5,6 +5,7 @@
 -D ELPP_PERFORMANCE_MICROSECONDS
 -D ELPP_UNICODE
 -I common
+-I third-party/mozi
 -I third-party/nvwa
 -I third-party/cmcstl2/include
 -I third-party/cppcoro/include
