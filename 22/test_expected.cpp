@@ -9,13 +9,14 @@ tl::expected<int, string> safe_divide(int i, int j)
 {
     if (j == 0) {
         return tl::unexpected("divide by zero"s);
-    } else if (i == INT_MIN && j == -1) {
-        return tl::unexpected("integer divide overflows"s);
-    } else if (i % j != 0) {
-        return tl::unexpected("not integer division"s);
-    } else {
-        return i / j;
     }
+    if (i == INT_MIN && j == -1) {
+        return tl::unexpected("integer divide overflows"s);
+    }
+    if (i % j != 0) {
+        return tl::unexpected("not integer division"s);
+    }
+    return i / j;
 }
 
 tl::expected<int, string> caller(int i, int j, int k)
