@@ -10,7 +10,11 @@
 
 int main()
 {
-#if !(defined(__GNUC__) && !defined(__clang__) && __GNUC__ < 12)
+#if !(defined(__GNUC__) && !defined(__clang__) && __GNUC__ < 12) &&        \
+    !defined(_MSC_VER)
+    // MSVC does not handle NAN comparisons well even with /fp:strict
+    static_assert(!(NAN < 1));
+    static_assert(!(1 < NAN));
     static_assert(!(NAN < 1));
     static_assert(!(1 < NAN));
     static_assert(!(1 == NAN));
