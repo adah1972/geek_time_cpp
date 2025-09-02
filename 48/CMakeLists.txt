@@ -1,0 +1,41 @@
+cmake_minimum_required(VERSION 3.12)
+project(cxx23_misc)
+
+# Check if the compiler supports C++23
+include(CheckCXXCompilerFlag)
+if(MSVC)
+  check_cxx_compiler_flag("/std:c++23" COMPILER_SUPPORTS_CXX23)
+  check_cxx_compiler_flag("/std:c++latest" COMPILER_SUPPORTS_CXXLATEST)
+else()
+  check_cxx_compiler_flag("-std=c++23" COMPILER_SUPPORTS_CXX23)
+endif()
+
+if(NOT (COMPILER_SUPPORTS_CXX23 OR COMPILER_SUPPORTS_CXXLATEST))
+  message(WARNING "The compiler does not support C++23. Project is skipped.")
+  return()
+endif()
+
+if(MSVC)
+  if(COMPILER_SUPPORTS_CXX23)
+    add_compile_options(/std:c++23)
+  else()
+    add_compile_options(/std:c++latest)
+  endif()
+  add_compile_options(/Zc:__cplusplus)
+else()
+  add_compile_options(-std=c++23)
+endif()
+
+include_directories(../common)
+
+find_package(Boost)
+if(Boost_FOUND)
+  include_directories(${Boost_INCLUDE_DIRS})
+endif()
+
+add_executable(cxx23_test01_simplify_optional  test01_simplify_optional.cpp)
+add_executable(cxx23_test02_simplify_container test02_simplify_container.cpp)
+add_executable(cxx23_test03_recursive_lambda   test03_recursive_lambda.cpp)
+add_executable(cxx23_test04_const_view         test04_const_view.cpp)
+add_executable(cxx23_test05_std_expected       test05_std_expected.cpp)
+add_executable(cxx23_test06_mdspan             test06_mdspan.cpp)
