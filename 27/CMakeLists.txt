@@ -6,7 +6,7 @@ set(Boost_USE_MULTITHREADED ON)
 
 find_package(cpprestsdk CONFIG REQUIRED)
 find_package(Threads)
-find_package(Boost REQUIRED chrono system thread)
+find_package(Boost REQUIRED chrono thread)
 
 if(WIN32)
   # CMake on Windows with vcpkg
@@ -22,7 +22,6 @@ else(WIN32)
     ssl
     crypto
     Boost::chrono
-    Boost::system
     Boost::thread
     Threads::Threads)
 endif(WIN32)
