@@ -1,5 +1,5 @@
-#include <iostream>
-#include <stdexcept>
+#include <iostream>   // std::cout
+#include <stdexcept>  // std::invalid_argument
 
 #if __cpp_consteval >= 201811L || __clang_major__ >= 11
 

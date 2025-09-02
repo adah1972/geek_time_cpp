@@ -2,6 +2,7 @@
 #include <ostream>   // std::ostream
 #include <tuple>     // std::get/tuple/make_tuple
 #include <utility>   // std::index_sequence/index_sequence_for
+#include <stddef.h>  // size_t
 
 using namespace std;
 

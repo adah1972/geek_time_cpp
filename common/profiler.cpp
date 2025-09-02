@@ -1,7 +1,10 @@
 #include "profiler.h"
-#include <cassert>
-#include <iostream>
-#include <vector>
+#include <iostream>  // std::cout
+#include <vector>    // std::vector
+#include <assert.h>  // assert
+#include <stddef.h>  // size_t
+#include <stdint.h>  // uint64_t
+#include "rdtsc.h"   // rdtsc
 
 namespace {
 

@@ -6,6 +6,7 @@
 #include <tuple>                  // std::tuple_element/tuple_size
 #include <type_traits>            // std::decay_t
 #include <typeinfo>               // std::type_info
+#include <utility>                // std::move
 #include "compile_time_string.h"  // CTS_GET_VALUE
 #include "output_range.h"         // operator<< for tuples
 #include "static_reflection.h"    // DEFINE_STRUCT/DECLARE_TUPLE_LIKE/sr::...

@@ -24,7 +24,7 @@ int main()
 
 #else
 
-#include <iostream>
+#include <iostream>  // std::cerr
 
 int main()
 {

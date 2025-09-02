@@ -53,7 +53,7 @@ int main()
 
 #else
 
-#include <iostream>
+#include <iostream>  // std::cout
 
 int main()
 {

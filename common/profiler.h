@@ -1,7 +1,8 @@
 #ifndef PROFILER_H
 #define PROFILER_H
 
-#include "rdtsc.h"
+#include <stdint.h>  // uint64_t
+#include "rdtsc.h"   // rdtsc
 
 struct name_mapper {
     int number;
