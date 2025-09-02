@@ -16,7 +16,7 @@ struct length {
     };
     static constexpr double factors[] = {1.0,    1000.0, 1e-3,   1e-2,
                                          0.0254, 0.3048, 0.9144, 1609.344};
-    explicit length(double v, unit u = metre) { value = v * factors[u]; }
+    explicit length(double v, unit u = metre) : value(v * factors[u]) {}
 };
 
 length operator+(length lhs, length rhs)
@@ -24,14 +24,14 @@ length operator+(length lhs, length rhs)
     return length(lhs.value + rhs.value);
 }
 
-length operator"" _m(long double v)
+length operator""_m(long double v)
 {
-    return length(v, length::metre);
+    return length(static_cast<double>(v), length::metre);
 }
 
-length operator"" _cm(long double v)
+length operator""_cm(long double v)
 {
-    return length(v, length::centimetre);
+    return length(static_cast<double>(v), length::centimetre);
 }
 
 int main()
