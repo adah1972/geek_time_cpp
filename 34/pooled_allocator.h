@@ -34,7 +34,7 @@ struct pooled_allocator : private Base {
         using other = pooled_allocator<U>;
     };
 
-    pooled_allocator()
+    pooled_allocator() noexcept
     {
         // Ensure the early creation of the memory pool.  Without this
         // call, a thread-local object may have lifetime issues using
@@ -45,7 +45,7 @@ struct pooled_allocator : private Base {
     }
 
     template <class U>
-    pooled_allocator(const pooled_allocator<U>&)
+    pooled_allocator(const pooled_allocator<U>&) noexcept
     {
     }
 
