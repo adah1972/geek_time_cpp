@@ -1,3 +1,4 @@
+#include <functional>           // std::equal_to/hash
 #include <thread>               // std::thread
 #include <unordered_set>        // std::unordered_set
 #include "container_op_test.h"  // test_container

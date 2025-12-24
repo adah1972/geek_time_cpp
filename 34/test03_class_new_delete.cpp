@@ -1,5 +1,7 @@
 #include <array>          // std::array
 #include <cassert>        // assert
+#include <cstddef>        // std::size_t
+#include <cstdint>        // std::uint64_t
 #include <iomanip>        // std::setw
 #include <iostream>       // std::cout
 #include <thread>         // std::thread

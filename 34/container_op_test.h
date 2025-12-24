@@ -4,6 +4,7 @@
 #include <algorithm>  // std::shuffle
 #include <array>      // std::array
 #include <cstddef>    // std::size_t
+#include <cstdint>    // std::uint64_t
 #include <iomanip>    // std::setw
 #include <iostream>   // std::cout
 #include <random>     // std::mt19937/uniform_int_distribution

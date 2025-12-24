@@ -1,8 +1,9 @@
 #ifndef POOLED_ALLOCATOR_H
 #define POOLED_ALLOCATOR_H
 
-#include <memory>
-#include "memory_pool.h"
+#include <cstddef>        // std::ptrdiff_t/size_t
+#include <memory>         // std::allocator/allocator_traits
+#include "memory_pool.h"  // memory_pool
 
 template <typename T>
 memory_pool<T>& get_memory_pool()
