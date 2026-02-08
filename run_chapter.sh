@@ -12,7 +12,7 @@ if [ ! -d "$BUILD_DIR" ]; then
 fi
 
 # Get all chapter directories containing executables
-chapters=$(find "$BUILD_DIR" -maxdepth 1 -type d -regex '.*/[0-9]+' | sort)
+chapters=$(find "$BUILD_DIR" -maxdepth 1 -type d -regex '.*/[0-9][0-9]' | sort)
 
 if [ -z "$chapters" ]; then
     echo "Error: No chapter directories found in build folder."
@@ -21,7 +21,8 @@ fi
 
 while true; do
     echo "========================================"
-    echo "    Modern C++ Practice Runner"
+    echo "    Modern C++ in Action"
+    echo "    OS: $OSTYPE"
     echo "========================================"
     echo ""
 
@@ -32,7 +33,7 @@ while true; do
 
     for ch in "${all_chapters[@]}"; do
         ch_name=$(basename "$ch")
-        executables=$(find "$ch" -maxdepth 1 -executable -type f ! -name "*.cmake" ! -name "Makefile" ! -name "*.so*" ! -name ".*")
+        executables=$(find "$ch" -maxdepth 1 -perm -001 -type f ! -name "*.cmake" ! -name "Makefile" ! -name "*.so*" ! -name ".*")
         if [ -n "$executables" ]; then
             printf "  Chapter %2s\n" "$ch_name"
             chapter_list+=("$ch_name")
@@ -67,7 +68,7 @@ while true; do
     while true; do
         echo ""
         echo "--- Chapter $ch_name Executables ---"
-        execs=$(find "$selected_ch" -maxdepth 1 -executable -type f ! -name "*.cmake" ! -name "Makefile" ! -name "*.so*" ! -name ".*" | sort)
+        execs=$(find "$selected_ch" -maxdepth 1 -perm -001 -type f ! -name "*.cmake" ! -name "Makefile" ! -name "*.so*" ! -name ".*" | sort)
 
         exec_list=()
         j=1
