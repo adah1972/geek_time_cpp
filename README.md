@@ -35,3 +35,5 @@ cmake --build . -j --config Release
 cmake .. -DCMAKE_BUILD_TYPE=Debug
 cmake --build . -j8
 ```
+
+在 Unix 环境里，随后可以使用 `./run_chapter.sh` 脚本来方便地选择要运行的程序（[由 mlbo 贡献](https://github.com/adah1972/geek_time_cpp/pull/1)），根据屏幕提示选择要运行的程序即可。
