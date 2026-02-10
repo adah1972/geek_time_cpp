@@ -12,7 +12,7 @@ if [ ! -d "$BUILD_DIR" ]; then
 fi
 
 # Get all chapter directories containing executables
-chapters=$(find "$BUILD_DIR" -maxdepth 1 -type d -regex '.*/[0-9][0-9]' | sort)
+chapters=$(find -L "$BUILD_DIR" -maxdepth 1 -type d -regex '.*/[0-9][0-9]' | sort)
 
 if [ -z "$chapters" ]; then
     echo "Error: No chapter directories found in build folder."
